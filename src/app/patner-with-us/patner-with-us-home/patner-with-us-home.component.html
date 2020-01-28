@@ -1,0 +1,350 @@
+<div class="container">
+    <div class="row pt-2">
+        <div class="col-sm-6">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <h3>Partenr With US</h3>
+                </li>
+            </ol>
+
+        </div>
+        <div class="col-sm-6">
+
+        </div>
+    </div>
+
+    <div class="row pb-5">
+
+        <div class="col-sm-3">
+            <div class="custom-control custom-radio">
+                <input type="radio" name="partner" (click)="vendors()" [checked]="vendor" class="custom-control-input"
+                    id="vendor">
+                <label class="custom-control-label" for="vendor">Vendor</label>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="custom-control custom-radio">
+                <input type="radio" name="partner" (click)="schools()" [checked]="school" class="custom-control-input"
+                    id="school">
+                <label class="custom-control-label" for="school">School</label>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="custom-control custom-radio">
+                <input type="radio" name="partner" (click)="colleges()" [checked]="college" class="custom-control-input"
+                    id="college">
+                <label class="custom-control-label" for="college">College</label>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#pending">Pending</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#accepted">Accepted</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#rejected">Rejected</a>
+            </li>
+        </ul>
+
+
+        <div class="tab-content">
+
+            <!-- pending tab content -->
+            <div id="pending" class="container tab-pane active"><br>
+
+                <div class="row mb-5">
+                    <div class="col-12">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <div class="mr-0 entries">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text entry">show</span>
+                                            </div>
+                                            <select class="form-control">
+                                                <option>1-7</option>
+                                            </select>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text entry">entries</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ml-0 search">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"> <i class="fa fa-search"
+                                                        aria-hidden="true"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="card-body">
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Sr#</th>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Organization Name</th>
+                                            <th>Location</th>
+                                            <th>View</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr >
+                                            <td>1</td>
+                                            <td>first Name Middle Name Last Name </td>
+                                            <td>vendor</td>
+                                            <td>ABC Technologies</td>
+                                            <td>location name</td>
+                                            <td [routerLink]="['/partner_with_us_view_vendor']">View</td>
+
+                                            <td>
+                                                <div class="text-center">
+                                                    <i class="fa fa-trash "></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr >
+                                            <td>2</td>
+                                            <td>first Name Middle Name Last Name </td>
+                                            <td>college</td>
+                                            <td>ABC Technologies</td>
+                                            <td>location name</td>
+                                            <td [routerLink]="['/partner_with_us_view_college']">View</td>
+
+                                            <td>
+                                                <div class="text-center">
+                                                    <i class="fa fa-trash "></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr >
+                                            <td>1</td>
+                                            <td>first Name Middle Name Last Name </td>
+                                            <td>school</td>
+                                            <td>ABC Technologies</td>
+                                            <td>location name</td>
+                                            <td [routerLink]="['/partner_with_us_view_school']">View</td>
+
+                                            <td>
+                                                <div class="text-center">
+                                                    <i class="fa fa-trash "></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+
+                                <div class="row py-3 px-3">
+                                    <ul class="pagination mx-auto">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- pending tab content -->
+
+            <!-- accepted tab content -->
+            <div id="accepted" class="container tab-pane fade"><br>
+
+                <div class="row mb-5">
+                    <div class="col-12">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <div class="mr-0 entries">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text entry">show</span>
+                                            </div>
+                                            <select class="form-control">
+                                                <option>1-7</option>
+                                            </select>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text entry">entries</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ml-0 search">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"> <i class="fa fa-search"
+                                                        aria-hidden="true"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="card-body">
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Sr#</th>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Organization Name</th>
+                                            <th>Location</th>
+                                            <th>View</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let data of tabledata">
+                                            <td>{{data.sr}}</td>
+                                            <td>{{data.name}}</td>
+                                            <td>{{data.type}}</td>
+                                            <td>{{data.organization_name}}</td>
+                                            <td>{{data.location}}</td>
+                                            <td>View</td>
+
+                                            <td>
+                                                <div class="text-center">
+                                                    <i class="fa fa-trash "></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+
+                                <div class="row py-3 px-3 ">
+                                    <ul class="pagination mx-auto">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- accepted tab content -->
+
+            <!-- rejected tab content -->
+            <div id="rejected" class="container tab-pane fade"><br>
+
+                <div class="row mb-5">
+                    <div class="col-12">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <div class="mr-0 entries">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text entry">show</span>
+                                            </div>
+                                            <select class="form-control">
+                                                <option>1-7</option>
+                                            </select>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text entry">entries</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ml-0 search">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"> <i class="fa fa-search"
+                                                        aria-hidden="true"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="card-body">
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Sr#</th>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Organization Name</th>
+                                            <th>Location</th>
+                                            <th>View</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let data of tabledata">
+                                            <td>{{data.sr}}</td>
+                                            <td>{{data.name}}</td>
+                                            <td>{{data.type}}</td>
+                                            <td>{{data.organization_name}}</td>
+                                            <td>{{data.location}}</td>
+                                            <td>View</td>
+
+                                            <td>
+                                                <div class="text-center">
+                                                    <i class="fa fa-trash "></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                                <div class="row py-3 px-3">
+                                    <ul class="pagination mx-auto">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- rejected tab content -->
+
+        </div>
+    </div>
+
+</div>

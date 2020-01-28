@@ -1,0 +1,12 @@
+.ml{
+    float: right;
+}
+.btn_border_radius{
+    border-radius: 30px;
+}
+.img{
+    height: 200px !important;
+}
+.checked {
+    color: orange;
+  }

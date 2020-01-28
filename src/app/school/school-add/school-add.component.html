@@ -1,0 +1,914 @@
+<div class="container">
+    <section class="content-header">
+        <!-- <div class="container-fluid"> -->
+
+        <div class="row">
+
+            <div class="col-sm-6">
+                <label class="top_header_txt">School > Add School</label>
+            </div>
+
+
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-6 ">
+
+
+                        <button class="btn btn-dark btn-block topheader ">CREATE LOGIN</button>
+
+                    </div>
+                    <div class="col-sm-6 ">
+
+
+                        <button class="btn btn-dark btn-block topheader">UPLOAD EXCEL FILE</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row mb-2">
+
+            <div class="col-sm-6">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <h3>Add Class</h3>
+                    </li>
+                    <!-- <li class="breadcrumb-item active">Add Course</li> -->
+                </ol>
+            </div>
+            <div class="col-sm-6">
+
+            </div>
+        </div>
+        <!-- </div> -->
+    </section>
+
+    <div class="row">
+        <div class="col-sm-12">
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#information">Information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#School_single_page">School Single Page</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div class="tab-content">
+
+        <div id="information" class="container tab-pane active"><br>
+
+            <div>
+                <h5 class="pb-2">Image Upload</h5>
+
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="card" style="text-align: center;">
+                            <div class="form-group" style="height:16vh;padding-top:7vh">
+                                <label _ngcontent-ovp-c17="" for="files" style="width:fit-content;background-color:transparent;letter-spacing:1px">
+                                    Upload</label>
+                                <input type="file" class="form-control" id="files" hidden>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row bg">
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="School_name">School Name</label>
+                                <input type="text" placeholder="School Name" id="School_name" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="location">School Location</label>
+                                <select class="form-control" id="location">
+                                    <option>Select Location</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="row bg">
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="School_type"> Type</label>
+                                <select class="form-control" id="School_type">
+                                    <option >Select School Type</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="select-specialization">
+                                <div class="form-group-lg py-2">
+                                    <label for="accreditation">Accreditation</label>
+                                    <select class="form-control" id="accreditation">
+                                        <option>Select Accreditation</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row bg">
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="ownership">Ownership</label>
+                                <select class="form-control" id="ownership">
+                                    <option>Select Ownership</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="approval">Approval</label>
+                                <select class="form-control" id="approval">
+                                    <option>Select Approval</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <!-- add course  -->
+                <div>
+
+
+                    <div class="course_list">
+                        <br>
+                        <h5 class="pb-2">Class List</h5>
+                        <br>
+
+                        <div class="row">
+
+                            <div class="col-sm-4">
+                                <div class="form-group-lg py-2">
+                                    <label for="course_name">Class </label>
+                                    <select class="form-control" id="course_name" required>
+                                        <option>Select Course Name</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-4">
+                                <div class="form-group-lg py-2">
+                                    <label for="course_name">Accreditation </label>
+                                    <select class="form-control" id="course_name" required>
+                                        <option>Accreditation</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-4">
+                                <div class="form-group-lg py-2">
+                                    <label for="admission">Stream</label>
+                                    <select class="form-control" id="admission" required>
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group-lg py-2">
+                                    <label for="accreditation">Category</label>
+                                    <select class="form-control" id="accreditation" required>
+                                        <option>Category</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group-lg py-2">
+                                    <label for="specialization">Mode of Study</label>
+                                    <select class="form-control" id="specialization" required>
+                                        <option>Mode of Study</option>
+                                        <option>Full Time</option>
+                                        <option>Distance/Correspondance</option>
+                                        <option>Part Time-Classroom</option>
+                                       
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group-lg py-2">
+                                    <label for="course_status">Approval</label>
+                                    <select class="form-control" id="course_status" required>
+                                        <option>Approval</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group-lg py-2">
+                                    <label for="course_deamnd">Rank</label>
+                                    <select class="form-control" id="course_deamnd" required>
+                                        <option>Rank</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <!-- add course -->
+
+
+                <div class="row">
+                    <div class="save_btn">
+
+                        <button class="btn btn-dark btn_border_radius">Save</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+        <div id="School_single_page" class="container tab-pane fade active"><br>
+
+
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#overview">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#admission_eligibilty_criteria">Admission Eligibilty
+                        Criteria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#enterance_exam_acceptable">Enterance Exam
+                        Acceptable</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#facilities">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#gallery"> Gallery </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#events">Events
+                        Acceptable</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#scholarship">Scholership</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#qa">Q&A</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#article">Article</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#contact">Contact</a>
+                </li>
+            </ul>
+
+
+            <div class="tab-content">
+
+
+                <!-- overview tab content -->
+                <div id="overview" class="container tab-pane active"><br>
+
+                    <div style="min-height: 80vh;">
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- overview tab content -->
+
+
+                <!-- Admission Eligibilty Criteria tab content -->
+                <div id="admission_eligibilty_criteria" class="container tab-pane fade"><br>
+
+                    <div style="min-height: 80vh;">
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Admission Eligibilty Criteria tab content -->
+
+                <!--Enterance Exam Acceptable tab content -->
+                <div id="enterance_exam_acceptable" class="container tab-pane fade"><br>
+                    <div style="min-height: 80vh;">
+
+                        <div class="row pt-3">
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="gate" name="example1">
+                                    <label class="custom-control-label" for="gate">Gate</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="jee" name="example1">
+                                    <label class="custom-control-label" for="jee">JEE</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="comedk" name="example1">
+                                    <label class="custom-control-label" for="comedk">Comed-k</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row pt-3">
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="gmat" name="example1">
+                                    <label class="custom-control-label" for="gmat">GMAT</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="py-5">
+                            <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                        </div>
+
+
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Enterance Exam Acceptable tab content -->
+
+                <!--Facilities tab content -->
+                <div id="facilities" class="container tab-pane fade"><br>
+
+                    <div style="min-height: 80vh;">
+                        <div class="row pt-3">
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="ac_classroom" name="example1">
+                                    <label class="custom-control-label" for="ac_classroom">A/C Classrooms</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="auditorium" name="example1">
+                                    <label class="custom-control-label" for="auditorium">Auditorium</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="cafeteria" name="example1">
+                                    <label class="custom-control-label" for="cafeteria">Cafeteria</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row pt-3">
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="convenience_store" name="example1">
+                                    <label class="custom-control-label" for="convenience_store">Convenience
+                                        store</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="dance_room" name="example1">
+                                    <label class="custom-control-label" for="dance_room">Dance Room</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="facilities2" name="example1">
+                                    <label class="custom-control-label" for="facilities2">Facilities2</label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row pt-3">
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="gym" name="example1">
+                                    <label class="custom-control-label" for="gym">Gym</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="hospital" name="example1">
+                                    <label class="custom-control-label" for="hospital">Hospital / Medical
+                                        Facilities</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="hostel" name="example1">
+                                    <label class="custom-control-label" for="hostel">Hostel</label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row pt-3">
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="labs" name="example1">
+                                    <label class="custom-control-label" for="labs">Labs</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="library" name="example1">
+                                    <label class="custom-control-label" for="library">Library</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="lunch_dinner" name="example1">
+                                    <label class="custom-control-label" for="lunch_dinner">Lunch & Dinner</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row pt-3">
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="sports_complex" name="example1">
+                                    <label class="custom-control-label" for="sports_complex">Sports Complex</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="wifi" name="example1">
+                                    <label class="custom-control-label" for="wifi">WI FI Campus</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Facilities tab content -->
+
+
+                <!--Gallery tab content -->
+                <div id="gallery" class="container tab-pane fade"><br>
+
+                    <div style="min-height: 80vh;">
+                        <div class="category_list mt-3 shadow-lg p-3 mb-3 bg-white rounded">
+                            <h3 style="font-weight: bold;">Category List</h3>
+                            <!-- <hr> -->
+                            <div class="row py-3">
+                                <div class="col-sm-3 px-3">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6iT3tkvd-EY5O1aVDD6wak6rA6VmnVWBN8DMBXjEP4db3O2dz&s">
+                                </div>
+                                <div class="col-sm-3 px-3">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6iT3tkvd-EY5O1aVDD6wak6rA6VmnVWBN8DMBXjEP4db3O2dz&s">
+                                </div>
+                                <div class="col-sm-3 px-3">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6iT3tkvd-EY5O1aVDD6wak6rA6VmnVWBN8DMBXjEP4db3O2dz&s">
+                                </div>
+                                <div class="col-sm-3 px-3">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6iT3tkvd-EY5O1aVDD6wak6rA6VmnVWBN8DMBXjEP4db3O2dz&s">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <h3 class="pt-5" style="font-weight: bold;">Add New Gallery Category</h3>
+                        <hr>
+                        <h5 class="pb-2">Category Image</h5>
+
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="card" style="text-align: center;">
+                                    <div class="form-group" style="height:16vh;padding-top:7vh">
+                                        <label _ngcontent-ovp-c17="" for="files" style="width:fit-content;background-color:transparent;letter-spacing:1px">
+                                            Upload</label>
+                                        <input type="file" class="form-control" id="files" hidden>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row bg">
+                            <div class="col-sm-12 py-2 pb-5">
+                                <div class="select-Category">
+                                    <div class="form-group-lg py-2">
+                                        <label for="category_name">Category Name</label>
+                                        <input type="text" placeholder="Type here" id="category_name" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Gallery tab content -->
+
+
+                <!--Event Acceptable tab content -->
+                <div id="events" class="container tab-pane fade"><br>
+                    <div style="min-height: 80vh;">
+                        <div class="row">
+                            <div class="col-12">
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Events List</h3>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <table id="example1" class="table table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sr#</th>
+                                                    <th>Event Image</th>
+                                                    <th>Event Name</th>
+                                                    <th>Event Date</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let data of tabledata">
+                                                    <td>{{data.sr}}</td>
+                                                    <td>{{data.event_image}}</td>
+                                                    <td>{{data.event_name}}</td>
+                                                    <td>{{data.event_date}}</td>
+
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <i class="fa fa-pencil" [routerLink]="['/recruiters_edit']"></i> &nbsp;&nbsp;
+                                                            <i class="fa fa-trash "></i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                                <!-- /.card -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+
+
+
+                        <h3 class="pt-5" style="font-weight: bold;">Add New Event Category</h3>
+                        <hr>
+                        <h5 class="pb-2">Event Image</h5>
+
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="card" style="text-align: center;">
+                                    <div class="form-group" style="height:16vh;padding-top:7vh">
+                                        <label _ngcontent-ovp-c17="" for="files" style="width:fit-content;background-color:transparent;letter-spacing:1px">
+                                            Upload</label>
+                                        <input type="file" class="form-control" id="files" hidden>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row bg">
+                            <div class="col-sm-6 py-2 pb-5">
+                                <div class="select-Category">
+                                    <div class="form-group-lg py-2">
+                                        <label for="event_name">Event Name</label>
+                                        <input type="text" placeholder="Event Name" id="event_name" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 py-2 pb-5">
+                                <div class="select-Category">
+                                    <div class="form-group-lg py-2">
+                                        <label for="event_date">Event Date</label>
+                                        <input type="date" placeholder="Select Event Date" id="event_date" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row bg">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="event_description">Event Description</label>
+                                    <textarea class="form-control" rows="5" id="event_description" placeholder="Event Description"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class=" bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--Event Acceptable tab content -->
+
+
+
+                <!--scholarship tab content -->
+                <div id="scholarship" class="container tab-pane fade"><br>
+
+                    <div style="min-height: 80vh;">
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!--scholarship tab content -->
+
+
+                <!--Q&A tab content -->
+                <div id="qa" class="container tab-pane fade"><br>
+
+                    <div style="min-height: 80vh;">
+                        <div class="card">
+                            <div class="card-title px-3 pt-2">
+                                <h3 style="float: left;">New Questions?</h3>
+                                <p style="float: right;">
+                                    <span> <i class="fa fa-pencil"></i>&nbsp;
+                                        <i class="fa fa-trash "></i></span></p>
+                            </div>
+                            <div class="card-body px-3">
+                                New Question Ans.
+                            </div>
+                        </div>
+
+
+                        <div class="row bg">
+                            <div class="col-sm-12 py-2 pb-5">
+                                <div class="select-Category">
+                                    <div class="form-group-lg py-2">
+                                        <label for="question"> Question</label>
+                                        <input type="text" placeholder="Type here" id="question" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row bg">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="answers">Answers</label>
+                                    <textarea class="form-control" rows="5" id="answers" placeholder="Answers" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--Q&A tab content -->
+
+
+                <!--Article tab content -->
+                <div id="article" class="container tab-pane fade"><br>
+
+                    <div style="min-height: 80vh;">
+                        <div class="card">
+                            <div class="card-title px-3 pt-2">
+                                <h3 style="float: left;">New Article?</h3>
+                                <p style="float: right;">
+                                    <span> <i class="fa fa-pencil"></i>&nbsp;
+                                        <i class="fa fa-trash "></i></span></p>
+                            </div>
+                            <div class="card-body px-3">
+                                Article Desc.
+                            </div>
+                        </div>
+
+
+                        <div class="row bg">
+                            <div class="col-sm-12 py-2 pb-5">
+                                <div class="select-Category">
+                                    <div class="form-group-lg py-2">
+                                        <label for="article"> Article Title</label>
+                                        <input type="text" placeholder="Type here" id="article" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row bg">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="article_description">Article Description</label>
+                                    <textarea class="form-control" rows="5" id="article_description" placeholder="Article Description" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="ml-0"><button class="btn btn-dark btn_border_radius">+Add More</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!--article tab content -->
+
+
+
+                <!--Contact tab content -->
+                <div id="contact" class="container tab-pane fade"><br>
+
+                    <div style="min-height: 80vh;">
+
+
+
+                        <div class="row bg">
+                            <div class="col-sm-12">
+                                <div class="select-Category">
+                                    <div class="form-group-lg">
+                                        <label for="article"> Article Title</label>
+                                        <input type="text" placeholder="Type here" id="article" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row bg">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="article_description">Article Description</label>
+                                    <textarea class="form-control" rows="5" id="article_description" placeholder="Article Description" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row bg">
+                            <div class="col-sm-6 ">
+                                <div class="select-specialization">
+                                    <div class="form-group ">
+                                        <label for="School_url">School Url</label>
+                                        <input type="url" class="form-control" id="School_url" placeholder="AD.COM" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 ">
+                                <div class="select-specialization">
+                                    <div class="form-group">
+                                        <label for="email">School Email Address</label>
+                                        <input type="email" placeholder="ad2gmail.com" class="form-control" id="email">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row bg">
+                            <div class="col-sm-6 ">
+                                <div class="select-specialization">
+                                    <div class="form-group">
+                                        <label for="School_ph">School Phone Number</label>
+                                        <input type="text" class="form-control" id="School_ph" placeholder="8896326327" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 ">
+                                <div class="select-specialization">
+                                    <div class="form-group">
+                                        <label for="School_ph">School Mobile Number</label>
+                                        <input type="text" class="form-control" id="School_ph" placeholder="988655566">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row bg">
+                            <div class="col-sm-6 ">
+                                <div class="select-specialization">
+                                    <div class="form-group">
+                                        <label for="School_ph">School Map</label>
+                                        <input type="text" class="form-control" id="School_ph" placeholder="<iframe class='image-area'" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Contact tab content -->
+
+
+
+
+            </div>
+
+
+
+
+        </div>

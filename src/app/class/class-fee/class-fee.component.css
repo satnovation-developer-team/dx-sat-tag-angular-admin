@@ -1,0 +1,12 @@
+.ml {
+    float: right;
+}
+
+.btn_border_radius {
+    border-radius: 30px;
+}
+
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}

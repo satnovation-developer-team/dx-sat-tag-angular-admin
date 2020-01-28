@@ -1,0 +1,22 @@
+p{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 0 !important;
+}
+.card-header {
+    padding: 0 !important;
+}
+.card-title {
+    margin-bottom: 0 !important;
+  }
+  .entry{
+    background-color: transparent !important;
+    border: none !important;
+    
+  }
+  .search{
+    float: right;
+  }
+  .entries{
+    float: left;
+  }

@@ -1,0 +1,99 @@
+/* .example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-events {
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid #555;
+  }
+  
+   */
+
+   /* ::ng-deep .mat-sidenav-container{
+    position: relative;
+    height: auto;
+    min-height: 100vh !important;
+  } */
+/* i{margin-right: 5px;color: white;}
+
+  ::ng-deep .mat-drawer-inner-container {
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: hidden !important;
+}
+a{padding-top:15px;}
+::ng-deep .mat-sidenav {
+    padding: 0 !important;
+}
+
+::ng-deep  .mat-sidenav-content {
+    padding: 0 !important;
+  } */
+
+  /* .sidenavbars{
+    height: auto;
+    width: 100%;
+  } */
+  /* :host { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: stretch; }
+  mat-toolbar { flex: 0 0 auto; }
+  div { flex: 1 1 0; }
+  
+  mat-drawer-container, mat-drawer-content { display: block; height: 100%; }
+  main { height: 100%; overflow-y: auto; }
+
+
+  ::ng-deep  .mat-drawer {
+    position: relative !important;
+  } */
+
+i{margin-right: 5px;}
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+  }
+  
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+  
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }
+  .textright{
+    text-align: right;
+  }
+  /* width */
+  .example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  

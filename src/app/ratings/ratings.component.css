@@ -1,0 +1,57 @@
+.ratings {
+    margin-top: 1%;
+    color: #a1a1a1;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.star_ratings {
+    margin-top: 3px;
+    color: gray;
+}
+
+.star_ratings_txt {
+    margin-top: 5%;
+    margin-left: 10%;
+    font-size: 14px;
+    font-weight: 400;
+    color: gray;
+}
+
+.star_ratings_txt1 {
+    margin-top: 5%;
+    margin-left: 1%;
+    font-size: 14px;
+    font-weight: 400;
+    color: gray;
+}
+
+.star_ratings_txt2 {
+    margin-top: 1%;
+    margin-left: 10%;
+    font-size: 12px;
+    font-weight: 300;
+    color: gray;
+}
+
+.star_ratings_txt3 {
+    margin-left: 10%;
+    font-size: 14px;
+    font-weight: 400;
+    color: gray;
+}
+
+.star_ratings_txt4 {
+    margin-left: 1%;
+    font-size: 14px;
+    font-weight: 400;
+    color: gray;
+}
+
+.review_user {
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 18%;
+}

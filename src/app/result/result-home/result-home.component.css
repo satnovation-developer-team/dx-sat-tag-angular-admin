@@ -1,0 +1,28 @@
+.ml{
+    float: right;
+}
+.btn_border_radius{
+    border-radius: 30px;
+}
+.card-title {
+    margin-bottom: 0 !important;
+  }
+  .entry{
+    background-color: transparent !important;
+    border: none !important;
+    
+  }
+  .search{
+    float: right;
+  }
+  .entries{
+    float: left;
+  }
+  .add_del_action{
+      border: 1px solid #ced4da;
+      width: 30%;
+      height: 36px;
+      border-radius: 3px;
+      text-align: center;
+      padding-top: 7px;
+  }

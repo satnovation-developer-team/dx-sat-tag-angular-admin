@@ -1,0 +1,431 @@
+<div class="container">
+    <div class="row py-5">
+
+        <div class="col-sm-6">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Courses single page</a></li>
+                <li class="breadcrumb-item active">Add</li>
+            </ol>
+        </div>
+        <div class="col-sm-6">
+            <div class="ml">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><button class="btn btn-dark btn_border_radius">UPLOAD EXCEL
+                            FILE</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card p-5 mb-5">
+        <h5>Course Name</h5>
+        <br>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);">Information</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);">Guide</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);">Required Skill Set</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);"> Eligibilty Criteria </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);">Enterance Exam Acceptable</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);">Course Curriculum</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);">View Specialization</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);">Job Profile and Recruiters</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+
+
+            <!-- overview tab content -->
+            <div id="information" class="container tab-pane active" [formGroup]="informationForm"><br>
+                <div>
+                    <h5 class="pb-2">Image Upload</h5>
+
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="card" style="text-align: center;">
+                                <div class="form-group" style="height:16vh;padding-top:7vh">
+                                    <label _ngcontent-ovp-c17="" for="files"
+                                        style="width:fit-content;background-color:transparent;letter-spacing:1px">
+                                        Upload</label>
+                                    <input type="file" class="form-control" id="files" formControlName="image_upload" (input)="fileselect($event)" hidden
+                                    [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.image_upload.errors }">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngFor="let validation of informationFormValidations.image_upload" class="mb-3">
+                        <div *ngIf="informationSubmitted && informationFormControl.image_upload.errors">
+                            <span class="invalid-feedback d-block text-left"
+                                *ngIf="informationForm.get('image_upload').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                        </div>
+                    </div>
+
+                    <div class="title pt-2">
+                        <div style="float: left;">Course Name</div>
+                        <div style="float: right;">0/200</div><br>
+                        <div class="form-group">
+                            <input type="text" placeholder="Type here" class="form-control" formControlName="course_name"
+                            [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.course_name.errors }">
+                        </div>
+                    </div>
+                    <div *ngFor="let validation of informationFormValidations.course_name" class="mb-3">
+                        <div *ngIf="informationSubmitted && informationFormControl.course_name.errors">
+                            <span class="invalid-feedback d-block text-left"
+                                *ngIf="informationForm.get('course_name').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                        </div>
+                    </div>
+
+                    <div class="select-specialization">
+                        <div style="float: left;">Category</div><br>
+                        <div class="form-group-lg">
+                            <select placeholder="Type here" class="form-control" formControlName="category"
+                            [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.category.errors }">
+                                <option>PG</option>
+                                <option>UG</option>
+                                <option>After 12th</option>
+                            </select>
+                        </div>
+                        <div *ngFor="let validation of informationFormValidations.category" class="mb-3">
+                            <div *ngIf="informationSubmitted && informationFormControl.category.errors">
+                                <span class="invalid-feedback d-block text-left"
+                                    *ngIf="informationForm.get('category').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                            </div>
+                        </div>
+                        <div class="custom-control custom-checkbox pt-2">
+                            <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" formControlName="area_of_interest"
+                            [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.area_of_interest.errors }">
+                            <label class="custom-control-label" for="customCheck">Area Of Interest</label>
+                        </div>
+                        <div *ngFor="let validation of informationFormValidations.area_of_interest" class="mb-3">
+                            <div *ngIf="informationSubmitted && informationFormControl.area_of_interest.errors">
+                                <span class="invalid-feedback d-block text-left"
+                                    *ngIf="informationForm.get('area_of_interest').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class=" bg-secondary">
+                    <div class="row py-3 px-5">
+                        <a class="btn btn-dark ml-auto px-5" style="border-radius:30px;" data-toggle="tab" (click)="informationFormSubmit('#guide')">Next</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- overview tab content -->
+
+
+            <div id="guide" class="container tab-pane fade" style="height: 100%;" [formGroup]="guideForm"><br>
+
+                <div>
+                    <h5 class="pb-2">Upload Guide</h5>
+
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="card" style="text-align: center;">
+                                <div class="form-group" style="height:16vh;padding-top:7vh">
+                                    <label _ngcontent-ovp-c17="" for="pdf_files"
+                                        style="width:fit-content;background-color:transparent;letter-spacing:1px">
+                                        Upload Pdf</label>
+                                    <input type="file" class="form-control" id="pdf_files" formControlName="pdf_upload" (input)="fileselect($event)" hidden
+                                        [ngClass]="{ 'is-invalid': guideSubmitted && guideFormControl.pdf_upload.errors }">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngFor="let validation of guideFormValidations.pdf_upload" class="mb-3">
+                        <div *ngIf="guideSubmitted && guideFormControl.pdf_upload.errors">
+                            <span class="invalid-feedback d-block text-left"
+                                *ngIf="guideForm.get('pdf_upload').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class=" bg-secondary">
+                    <div class="row py-3">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4 ">
+                            <div class="btn_right">
+                                <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab" (click)="navigateBack('#information','#guide')">Back</a>&nbsp;
+                                <a class="btn btn-dark px-5" style="border-radius:30px;" data-toggle="tab" (click)="guideFormSubmit('#overview')">Next</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- </div> -->
+            </div>
+
+
+
+
+            <div id="overview" class="container tab-pane fade" [formGroup]="overviewForm"><br>
+                <div>
+                    <p>Overview</p>
+                    <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }" formControlName="overview"
+                    [ngClass]="{ 'is-invalid': overviewSubmitted && overviewFormControl.overview.errors }" ></ckeditor>
+
+                </div>
+
+                <div *ngFor="let validation of overviewFormValidations.overview" class="mb-3">
+                    <div *ngIf="overviewSubmitted && overviewFormControl.overview.errors">
+                        <span class="invalid-feedback d-block text-left"
+                            *ngIf="overviewForm.get('overview').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                    </div>
+                </div>
+
+                <div class=" bg-secondary">
+                    <div class="row py-3">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4 ">
+                            <div class="btn_right">
+                                <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab" (click)="navigateBack('#guide','#overview')">Back</a>&nbsp;
+                                <a class="btn btn-dark px-5" style="border-radius:30px;" data-toggle="tab" (click)="overviewFormSubmit('#required_skill_set')">Next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div id="required_skill_set" class="container tab-pane fade" [formGroup]="requiredSkillSetForm"><br>
+                <div>
+                    <p>Required Skill Set</p>
+                    <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }" formControlName="skill_set"
+                    [ngClass]="{ 'is-invalid': requiredSkillSetSubmitted && requiredSkillSetControl.skill_set.errors }"></ckeditor>
+
+                </div>
+
+                <div *ngFor="let validation of requiredSkillSetValidations.skill_set" class="mb-3">
+                    <div *ngIf="requiredSkillSetSubmitted && requiredSkillSetControl.skill_set.errors">
+                        <span class="invalid-feedback d-block text-left"
+                            *ngIf="requiredSkillSetForm.get('skill_set').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                    </div>
+                </div>
+                <div class=" bg-secondary">
+                    <div class="row py-3">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4 ">
+                            <div class="btn_right">
+                                <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab" (click)="navigateBack('#overview','#required_skill_set')">Back</a>&nbsp;
+                                <a class="btn btn-dark px-5" style="border-radius:30px;" data-toggle="tab" (click)="requiredSkillSetFormSubmit('#eligibilty_criteria')">Next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div id="eligibilty_criteria" class="container tab-pane fade" [formGroup]="eligibiltyCriteriaForm"><br>
+                <div>
+                    <p>Eligibility Criteria</p>
+                    <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }" formControlName="eligibility_criteria"
+                    [ngClass]="{ 'is-invalid': eligibiltyCriteriaSubmitted && eligibiltyCriteriaControl.eligibility_criteria.errors }"></ckeditor>
+
+                </div>
+                <div *ngFor="let validation of eligibiltyCriteriaValidations.eligibility_criteria" class="mb-3">
+                    <div *ngIf="eligibiltyCriteriaSubmitted && eligibiltyCriteriaControl.eligibility_criteria.errors">
+                        <span class="invalid-feedback d-block text-left"
+                            *ngIf="eligibiltyCriteriaForm.get('eligibility_criteria').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                    </div>
+                </div>
+                <div class=" bg-secondary">
+                    <div class="row py-3">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4 ">
+                            <div class="btn_right">
+                                <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab" (click)="navigateBack('#required_skill_set','#eligibilty_criteria')">Back</a>&nbsp;
+                                <a class="btn btn-dark px-5" style="border-radius:30px;" data-toggle="tab" (click)="eligibiltyCriteriaFormSubmit('#enternace_exam_acceptable')">Next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="enternace_exam_acceptable" class="container tab-pane fade" [formGroup]="enternaceExamAcceptableForm"><br>
+                <div>
+                    <p>Enterance Exam Acceptable</p>
+                    <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }" formControlName="entrance_exam"
+                    [ngClass]="{ 'is-invalid': enternaceExamAcceptableSubmitted && enternaceExamAcceptableControl.entrance_exam.errors }"></ckeditor>
+
+                </div>
+                <div *ngFor="let validation of enternaceExamAcceptableValidations.entrance_exam" class="mb-3">
+                    <div *ngIf="enternaceExamAcceptableSubmitted && enternaceExamAcceptableControl.entrance_exam.errors">
+                        <span class="invalid-feedback d-block text-left"
+                            *ngIf="enternaceExamAcceptableForm.get('entrance_exam').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                    </div>
+                </div>
+                <div class=" bg-secondary">
+                    <div class="row py-3">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4 ">
+                            <div class="btn_right">
+                                <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab" (click)="navigateBack('#eligibilty_criteria','#enternace_exam_acceptable')">Back</a>&nbsp;
+                                <a class="btn btn-dark px-5" style="border-radius:30px;" data-toggle="tab" (click)="enternaceExamAcceptableFormSubmit('#course_curriculum')">Next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="course_curriculum" class="container tab-pane fade" [formGroup]="courseCurriculumForm"><br>
+                <div>
+                    <p>Course Curriculum</p>
+                    <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }" formControlName="course_curriculum"
+                    [ngClass]="{ 'is-invalid': courseCurriculumSubmitted && courseCurriculumControl.course_curriculum.errors }"></ckeditor>
+
+                </div>
+                <div *ngFor="let validation of courseCurriculumValidations.course_curriculum" class="mb-3">
+                    <div *ngIf="courseCurriculumSubmitted && courseCurriculumControl.course_curriculum.errors">
+                        <span class="invalid-feedback d-block text-left"
+                            *ngIf="courseCurriculumForm.get('course_curriculum').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                    </div>
+                </div>
+
+                <div class=" bg-secondary">
+                    <div class="row py-3">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4 ">
+                            <div class="btn_right">
+                                <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab" (click)="navigateBack('#enternace_exam_acceptable','#course_curriculum')">Back</a>&nbsp;
+                                <a class="btn btn-dark px-5" style="border-radius:30px;" data-toggle="tab" (click)="courseCurriculumFormSubmit('#view_specialization')">Next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="view_specialization"  class="container tab-pane fade"  [formGroup]="viewSpecializationForm"><br>
+                <div>
+                    <p>View Specialization</p>
+                    <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }" formControlName="specialization"
+                        [ngClass]="{ 'is-invalid': viewSpecializationSubmitted && viewSpecializationControl.specialization.errors }">
+                    </ckeditor>
+                    
+                    </div>
+                    <div *ngFor="let validation of viewSpecializationValidations.specialization" class="mb-3">
+                        <div *ngIf="viewSpecializationSubmitted && viewSpecializationControl.specialization.errors">
+                            <span class="invalid-feedback d-block text-left"
+                                *ngIf="viewSpecializationForm.get('specialization').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                    </div>
+                
+                </div>
+
+                <div class=" bg-secondary">
+                    <div class="row py-3">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4 ">
+                            <div class="btn_right">
+                                <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab"
+                                    (click)="navigateBack('#course_curriculum','#view_specialization')">Back</a>&nbsp;
+                                <a class="btn btn-dark px-5" style="border-radius:30px;" data-toggle="tab"
+                                    (click)="viewSpecializationFormSubmit('#recruiters')">Next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="recruiters" class="container tab-pane fade" [formGroup]="recruitersForm"><br>
+
+                <div>
+
+                    <p>Job Profile Content</p>
+                    <ckeditor [data]="overviewData" [config]="{ height: [ [ '300' ] ] }" formControlName="job_profile"
+                    [ngClass]="{ 'is-invalid': recruitersSubmitted && recruitersControl.job_profile.errors }"></ckeditor>
+                    <br><br>
+                    <div *ngFor="let validation of recruitersValidations.job_profile" class="mb-3">
+                        <div *ngIf="recruitersSubmitted && recruitersControl.job_profile.errors">
+                            <span class="invalid-feedback d-block text-left"
+                                *ngIf="recruitersForm.get('job_profile').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                        </div>
+                    </div>
+
+                    <p>Recruiters Content</p>
+                    <ckeditor [data]="overviewData" [config]="{ height: [ [ '300' ] ] }" formControlName="recruiters_content"
+                    [ngClass]="{ 'is-invalid': recruitersSubmitted && recruitersControl.recruiters_content.errors }"></ckeditor>
+                    <div *ngFor="let validation of recruitersValidations.recruiters_content" class="mb-3">
+                        <div *ngIf="recruitersSubmitted && recruitersControl.recruiters_content.errors">
+                            <span class="invalid-feedback d-block text-left"
+                                *ngIf="recruitersForm.get('recruiters_content').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                        </div>
+                    </div>
+
+                    <div class="row pt-3">
+                        <div class="col-sm-4">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ICICI_group" name="ICICI_group" formControlName="ICICI_group">
+                                <label class="custom-control-label" for="ICICI_group">ICICI Group</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="Tata_consultancy_services" name="Tata_consultancy_services" formControlName="Tata_consultancy_services">
+                                <label class="custom-control-label" for="Tata_consultancy_services">Tata consultancy Services custom
+                                    checkbox</label>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                </div>
+
+                <br>
+                <div class=" bg-secondary">
+                    <div class="row py-3">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4 ">
+                            <div class="btn_right">
+                                <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab" (click)="navigateBack('#view_specialization','#recruiters')">Back</a>&nbsp;
+                                <button class="btn btn-dark px-5" style="border-radius:30px;" (click)="recruitersFormSubmit()">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

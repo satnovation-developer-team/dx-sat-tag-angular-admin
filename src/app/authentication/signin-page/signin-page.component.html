@@ -1,0 +1,113 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <div class="signin">
+                <div style="text-align: center;background-color: transparent;">
+                    <h3 ><span style="background-color: white;padding: 15px;box-shadow: 3px 3px 3px 2px #dbd9d9;">TAG</span></h3><br>
+
+                </div>
+                <div class="card" style="box-shadow: 3px 3px 3px 2px #dbd9d9;">
+                    <div class="card-title py-3">
+                        <p class="text-center">LOGIN</p>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="loginForm">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-user" style="color: teal;"
+                                            aria-hidden="true"></i></span>
+                                </div>
+                                <input type="text" class="form-control borderleft" placeholder="Email" formControlName="email_id"
+                                    [ngClass]="{ 'is-invalid': loginSubmitted && loginFormControl.email_id.errors }">
+                                    
+                            </div>
+
+                            <div *ngFor="let validation of loginFormValidations.email_id" class="mb-3">
+                                <div *ngIf="loginSubmitted && loginFormControl.email_id.errors">
+                                    <span class="invalid-feedback d-block text-left"
+                                        *ngIf="loginForm.get('email_id').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-lock" style="color: teal;"
+                                            aria-hidden="true"></i></span>
+                                </div>
+
+                                <input type="password" class="form-control borderleft" placeholder="Password" formControlName="password"
+                                    [ngClass]="{ 'is-invalid': loginSubmitted && loginFormControl.password.errors }">
+                            </div>
+
+                            <div *ngFor="let validation of loginFormValidations.password" class="mb-3">
+                                <div *ngIf="loginSubmitted && loginFormControl.password.errors">
+                                    <span class="invalid-feedback d-block text-left"
+                                        *ngIf="loginForm.get('password').hasError('required') ? '' : loginForm.get('password').dirty">{{validation.type == 'pattern'? validation.message : ''}}</span>
+                                    <span class="invalid-feedback d-block text-left"
+                                        *ngIf="loginForm.get('password').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                                </div>
+                            </div>
+
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                <label class="custom-control-label" for="customCheck">Keep me sign in</label>
+                            </div>
+
+                            <br>
+                            <button class="btn btn-dark  mx-auto d-block  btn-lg btn-block"
+                                style="border-radius: 30px;" (click)=Login()> LOGIN </button>
+                            <br>
+                            <p style="color:blue;text-align: center;" data-toggle="modal" data-target="#forgot"
+                                data-dismiss="modal">Forgot Password?</p>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+
+    <!-- </div> -->
+</div>
+
+
+
+<!-- The Modal -->
+<div class="modal fade" id="forgot">
+    <div class="modal-dialog ">
+        <div style="text-align: center;background-color: transparent;">
+            <h3><span
+                    style="background-color: rgba(9, 148, 136);color:white;padding: 10px;border-radius: 5px;">TAG</span>
+            </h3>
+        </div>
+        <div class="modal-content">
+
+            <div class="modal-header" style=" border-bottom: none !important">
+                <h4 class="modal-title mx-auto" >Forgot Password</h4>
+            </div>
+            <form [formGroup]="forgotPasswordForm">
+
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user" style="color: teal;" aria-hidden="true"></i></span>
+                        </div>
+                        <input type="text" class="form-control borderleft" placeholder="Email" formControlName="email_id"
+                            [ngClass]="{ 'is-invalid': forgotPasswordSubmitted && forgotPasswordFormControl.email_id.errors }">
+                    </div>
+                    <div *ngFor="let validation of forgotPasswordFormValidations.email_id" class="mb-3">
+                        <div *ngIf="forgotPasswordSubmitted && forgotPasswordFormControl.email_id.errors">
+                            <span class="invalid-feedback d-block text-left"
+                                *ngIf="forgotPasswordForm.get('email_id').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-dark  mx-auto btn-lg btn-block" style="border-radius: 30px;" (click)="forgot_password();">
+                        SUBMIT </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

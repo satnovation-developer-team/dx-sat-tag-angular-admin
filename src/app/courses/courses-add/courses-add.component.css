@@ -1,0 +1,36 @@
+.ml{
+    float: right;
+}
+.btn_border_radius{
+    border-radius: 30px;
+}
+/* .search{
+    width: 500px;
+} */
+/* .input-group{
+    width:100%;
+}
+.search{
+    float: center;
+} */
+.bg{
+    background-color: grey;
+}
+.container-fluid{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.card-title {
+    margin-bottom: 0 !important;
+  }
+  .entry{
+    background-color: transparent !important;
+    border: none !important;
+    
+  }
+  .search{
+    float: right;
+  }
+  .entries{
+    float: left;
+  }

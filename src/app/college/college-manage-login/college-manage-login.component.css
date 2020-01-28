@@ -1,0 +1,15 @@
+
+  .card-title {
+    margin-bottom: 0 !important;
+  }
+  .entry{
+    background-color: transparent !important;
+    border: none !important;
+    
+  }
+  .search{
+    float: right;
+  }
+  .entries{
+    float: left;
+  }

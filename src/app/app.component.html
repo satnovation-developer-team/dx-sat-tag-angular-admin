@@ -1,0 +1,17 @@
+<!-- <app-signin-page></app-signin-page> -->
+<!-- <router-outlet name="login"></router-outlet> -->
+<!-- <router-outlet name="home"></router-outlet> -->
+<!-- <app-home></app-home> -->
+
+<div *ngIf="activeLogin == false" class="mat-app-background basic-container">
+    <app-home></app-home>
+</div>
+
+<div *ngIf="activeLogin == true" class="mat-app-background basic-container">
+    <app-signin-page></app-signin-page>
+</div>
+
+<!-- <app-college-dashboard-login></app-college-dashboard-login> -->
+<!-- <app-college-dashboard-home></app-college-dashboard-home> -->
+<!-- <app-vendor-dashboard-home></app-vendor-dashboard-home> -->
+<!-- <app-vendor-dashboard-login></app-vendor-dashboard-login> -->

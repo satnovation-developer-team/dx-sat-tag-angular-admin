@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="row py-5">
+
+        <div class="col-sm-6">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a>Talk to Counseller</a></li>
+            </ol>
+        </div>
+    
+    </div>
+    <div class="data mb-5">
+        <div *ngFor="let data of datacard">
+        <div class="card px-5 shadow-sm p-3 mb-2 bg-white rounded" >
+            <div class="card-header">
+                <div class="row">
+                    <div class="col">
+                        <p class="text-center pzero"> {{data.username}}</p>
+                    </div>
+                    <div class="col">
+                        <p class="text-center pzero">{{data.date}}</p>
+                    </div>
+                    <div class="col">
+                        <p class="text-center pzero">{{data.time}}</p>
+                    </div>
+                    <div class="col">
+                        <p class="text-center pzero" style="color: red;">{{data.new}}</p>
+                    </div>
+                    <div class="col">
+                        <p class="text-center pzero" (click)="view()">View</p>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="show" class="card-body">
+
+                <div class="row pt-2">
+                    <div class="col-sm-12">
+                        <label>Talk to Counseller</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <textarea type="text" rows="5" class="form-control " placeholder="Message From User"
+                                id="msg" disabled></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="time">Time</label>
+                            <div class="input-group mb-3">
+                                <input type="time" class="form-control editbg" id="time" value="10.30">
+                                <div class="input-group-append">
+                                    <span class="input-group-text "><i class="fa fa-pencil"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <div class="input-group mb-3">
+                                <input type="date" class="form-control editbg" id="date" value="10/09/2019">
+                                <div class="input-group-append">
+                                    <span class="input-group-text "><i class="fa fa-pencil"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row px-5">
+                    <button class="btn btn-default ml-auto px-5 shadow p-3 mb-2 bg-white rounded"
+                        style="border-radius:30px;">Submit</button>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    </div>
+</div>

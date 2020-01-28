@@ -1,0 +1,313 @@
+.top_header {
+    color: #59636a;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 1%
+}
+
+.nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #575757;
+    font-size: 15px;
+    font-weight: 500;
+    border-color: #575757;
+    border-bottom: 3px solid #fff
+}
+
+.abc {
+    color: #000;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    border-color: #000;
+    border-bottom: 3px solid #00aea1
+}
+
+.top_header1 {
+    background-color: #000
+}
+
+.nav-item {
+    font-size: 15px
+}
+
+.tab_header {
+    margin-top: 3%;
+    margin-left: 3%;
+    width: 95%;
+    background-color: #575757
+}
+
+.nav-item {
+    font-size: 14px
+}
+
+.tab_fnt {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400
+}
+
+.txt_contact {
+    text-align: center;
+    font-size: 16px;
+    color: #5a666b;
+    font-weight: 500
+}
+
+.back_btn {
+    border-radius: 30px;
+    background-color: #fff;
+    border-color: gray;
+    border: 1px solid gray
+}
+
+.submit {
+    border-radius: 30px
+}
+
+.btm_header {
+    background-color: #fafcfc;
+    width: 100%
+}
+
+.btm_layer {
+    width: 100%;
+    height: 60px;
+    background-color: #fff
+}
+
+.txt_fnt {
+    color: #535f66;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.txt_fnt1 {
+    color: #535f66;
+    font-size: 14px;
+    font-weight: 400
+}
+
+.top_header_card {
+    background-color: #ede8e8;
+    width: 100%
+}
+
+.top_header_card_txt {
+    font-size: 18px;
+    font-weight: 500;
+    color: #536465
+}
+
+.top_header_txt {
+    text-align: justify;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #748084
+}
+
+.delete_icn {
+    margin-top: 1%;
+    margin-left: 20px
+}
+
+.delete_icn1 {
+    margin-top: 2%
+}
+
+.question_header {
+    margin-left: 10px;
+    margin-top: 3%;
+    background-color: #f8f8f8;
+    width: 100%
+}
+
+.txt_input {
+    margin-left: 3px
+}
+
+.qtxt {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #535f66
+}
+
+.add_txt {
+    font-size: 16px;
+    font-weight: 400;
+    color: #707b7b
+}
+
+.btm_header {
+    margin-left: 3%;
+    width: 100%;
+    background-color: #fff;
+    height: 50px
+}
+
+.btm_header1 {
+    margin-top: 3%;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding-bottom: 4%
+}
+
+.school_bg {
+    width: 100%;
+    background-color: #f8f8f8
+}
+
+.card_view_height {
+    margin-top: 20px;
+    height: 15vh;
+    width: 100%;
+    text-align: center
+}
+
+.news_article_txt {
+    color: grey;
+    font-size: 14px;
+    font-weight: 400
+}
+
+.news_article_txt1 {
+    color: grey;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.card_top {
+    margin-top: 3%;
+    width: 95%;
+    margin-left: 2%
+}
+
+.text_input:focus,
+.txt_input {
+    width: 100%;
+    border: 0;
+    background-color: #fff;
+    outline: 0
+}
+
+.btn_submit {
+    border-radius: 30px;
+    background-color: #343a40
+}
+
+.btn_submit_txt {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.btm_layer {
+    background-color: #fafafa;
+    margin-top: 10%;
+}
+
+.btm_header {
+    height: 200px;
+    background-color: greenyellow;
+}
+
+.title_txt {
+    font-size: 16px;
+    color: #6a7074;
+    font-weight: 500;
+    margin-left: 5%;
+}
+
+.title_txt1 {
+    font-size: 16px;
+    color: #6a7074;
+    font-weight: 500;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.title_txt2 {
+    font-size: 16px;
+    color: #6a7074;
+    font-weight: 500;
+    margin-left: 1%;
+    margin-top: 3%;
+}
+
+.title_txt_inpt {
+    margin-top: 2%;
+    font-size: 16px;
+    color: #6a7074;
+    font-weight: 500;
+    width: 98%;
+    margin-left: 4%;
+    height: 50px;
+    background-color: #fff;
+}
+
+.title_txt_inpt1 {
+    font-size: 15px;
+    color: #bdbdbd;
+    font-weight: 400;
+    width: 94%;
+    height: 50px;
+    background-color: #fff;
+}
+
+.txt_input {
+    margin-left: 3%;
+    background-color: #fafafa;
+    margin-top: 3%;
+    width: 95%;
+}
+
+.img_upload {
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.sub_btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+    padding-bottom: 2%;
+}
+
+.chk_header {
+    margin-left: 15px;
+}
+
+.btn_bg {
+    margin-top: 2%;
+    margin-left: 4%;
+    border-color: #000;
+    width: 50%;
+    border-radius: 5px;
+    border: 1 solid #212222;
+    background-color: #fff;
+}
+
+.droupdown_bg {
+    text-align: center;
+    width: 50%;
+}
+
+.select_optn {
+    width: 100%;
+}
+
+.txt_slt_header {
+    margin-left: 3%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #565656;
+}
+
+.txt_slt {
+    margin-left: 5%;
+    margin-top: 3%;
+}

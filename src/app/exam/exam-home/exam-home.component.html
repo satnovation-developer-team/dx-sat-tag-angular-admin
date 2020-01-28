@@ -1,0 +1,450 @@
+<div class="container">
+    <section class="content-header">
+        <!-- <div class="container-fluid"> -->
+        <div class="row mb-2">
+
+            <div class="col-sm-6">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <h3>Add Exam</h3>
+                    </li>
+                    <!-- <li class="breadcrumb-item active">Add Course</li> -->
+                </ol>
+            </div>
+            <div class="col-sm-6">
+
+            </div>
+        </div>
+        <!-- </div> -->
+    </section>
+
+    <div class="row">
+        <div class="col-sm-12">
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#information">Information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#exam_single_page">Exam Single Page</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div class="tab-content">
+
+        <div id="information" class="container tab-pane active"><br>
+
+            <div>
+                <div class="row bg">
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="course">Select Course</label>
+                                <select class="form-control" id="college_type">
+                                    <option>Course</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="exam">Exam Name</label>
+                                <input type="text" placeholder="Exam Name" id="exam" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row bg">
+
+                    <div class="col-sm-12 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="exam">Description</label>
+                                <textarea class="form-control" rows="5" id="description"
+                                    placeholder="Description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row bg">
+
+                    <div class="col-sm-12 py-2">
+                        <div class="save-btn">
+                            <div class="form-group-lg py-2">
+                                <div class="mx-auto pt-4">
+                                    <button class="btn btn-dark px-5 btn_border_radius">Save & Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+        <div id="exam_single_page" class="container tab-pane fade active"><br>
+
+
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#overview">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#admit_card">Admit Card </a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#application_form"> Application Form
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#dates">Dates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#question_papers"> Question Papers </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pattern">Pattern
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#syllabus">Syllabus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#results">Results</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#answer_key">Answer Key</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#cutoff">Cutoff</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#counselling">Counselling</a>
+                </li>
+            </ul>
+
+
+            <div class="tab-content">
+
+
+                <!-- overview tab content -->
+                <div id="overview" class="container tab-pane active"><br>
+
+                    <div style="min-height: 80vh;">
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- overview tab content -->
+
+
+                <!-- Admission Eligibilty Criteria tab content -->
+                <div id="admit_card" class="container tab-pane fade"><br>
+
+                    <div style="min-height: 80vh;">
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Admission Eligibilty Criteria tab content -->
+
+                <!--application_form tab content -->
+                <div id="application_form" class="container tab-pane fade"><br>
+                    <div style="min-height: 60vh;">
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                    </div>
+
+
+                    <div class="card mb-5">
+                        <!-- <div class="card-header bg-dark text-white">New Location</div> -->
+                        <div class="card-body p-4">
+
+                            <div class="row">
+
+                                <div class="col-sm-3">
+                                    <label for="fees_type">Image Upload</label>
+                                    <div class="card" style="text-align: center;">
+
+                                        <div class="form-group" style="height:16vh;padding-top:7vh">
+                                            <label _ngcontent-ovp-c17="" for="files"
+                                                style="width:fit-content;background-color:transparent;letter-spacing:1px">
+                                                Upload</label>
+                                            <input type="file" class="form-control" id="files" hidden>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row pt-3">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="fees_type">Heading </label>
+                                        <input type="text" class="form-control" id="board_name">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="fees_type">Link to Apply Button</label>
+                                        <input type="text" class="form-control" id="link">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4 ">
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-light add-more-application">Add More</button>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <!--application_form tab content -->
+
+                <!--dates tab content -->
+                <div id="dates" class="container tab-pane fade"><br>
+
+                    <div style="min-height: 80vh;">
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!--dates tab content -->
+
+
+                <!--question_papers tab content -->
+                <div id="question_papers" class="container tab-pane fade"><br>
+                    
+                    <div style="min-height: 60vh;">
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                    </div>
+                    
+                    <div class="card mb-5">
+                        <!-- <div class="card-header bg-dark text-white">New Location</div> -->
+                        <div class="card-body p-4">
+
+                            <div class="row">
+
+                                <div class="col-sm-3">
+                                    <label for="fees_type">Image Upload</label>
+                                    <div class="card" style="text-align: center;">
+
+                                        <div class="form-group" style="height:16vh;padding-top:7vh">
+                                            <label _ngcontent-ovp-c17="" for="files"
+                                                style="width:fit-content;background-color:transparent;letter-spacing:1px">
+                                                Upload</label>
+                                            <input type="file" class="form-control" id="files" hidden>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="col-sm-3">
+                                    <label for="fees_type">Upload Question Paper</label>                                    <div class="card" style="text-align: center;">
+
+                                        <div class="form-group" style="height:16vh;padding-top:7vh">
+                                            <label _ngcontent-ovp-c17="" for="files"
+                                                style="width:fit-content;background-color:transparent;letter-spacing:1px">
+                                                Upload</label>
+                                            <input type="file" class="form-control" id="files" hidden>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label for="fees_type">Heading </label>
+                                        <input type="text" class="form-control" id="board_name">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-3 ">
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-light add-more-qp">Add More</button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                     
+                    <div style="min-height: 60vh;">
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                    </div>
+                    
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!--question_papers tab content -->
+
+
+                <!--pattern tab content -->
+                <div id="pattern" class="container tab-pane fade"><br>
+
+                    <div style="min-height: 80vh;">
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!--pattern tab content -->
+
+
+
+                <!--syllabus tab content -->
+                <div id="syllabus" class="container tab-pane fade"><br>
+
+                    <div style="min-height: 80vh;">
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!--syllabus tab content -->
+
+
+                <!--results tab content -->
+                <div id="results" class="container tab-pane fade"><br>
+
+                    <div style="min-height: 80vh;">
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--results tab content -->
+
+
+                <!--Answer Key tab content -->
+                <div id="answer_key" class="container tab-pane fade"><br>
+
+                    <div style="min-height: 80vh;">
+                        <ckeditor [data]="overviewDataAnswerKey" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Answer Key tab content -->
+
+
+
+                <!--cutoff tab content -->
+                <div id="cutoff" class="container tab-pane fade"><br>
+
+                    <div style="min-height: 80vh;">
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--cutoff tab content -->
+
+                <!--Counselling tab content -->
+
+                <div id="counselling" class="container tab-pane "><br>
+
+                    <div style="min-height: 80vh;">
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Counselling tab content -->
+
+
+
+            </div>
+
+
+
+
+        </div>

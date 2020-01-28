@@ -1,0 +1,110 @@
+<div class="container">
+
+        <div class="row py-5">
+    
+            <div class="col-sm-6">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <h3>Charges</h3>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-sm-6">
+                <div class="ml">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><button class="btn btn-dark btn_border_radius">UPLOAD EXCEL
+                                FILE</button>
+                        </li>
+                        <li class="list-inline-item" [routerLink]="['/application_service_charge_add']"><button
+                                class="btn btn-dark btn_border_radius">Add</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    
+    
+
+        <div class="row pb-5">
+            <div class="col-12">
+    
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+
+                            <div class="mr-0 entries">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text entry">show</span>
+                                    </div>
+                                    <select  class="form-control">
+                                        <option>1-7</option>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text entry">entries</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ml-0 search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"> <i class="fa fa-search"
+                                                aria-hidden="true"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>       
+                    </div>
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Sr#</th>
+                                    <th>College/School Name</th>
+                                    <th>Application Charge</th>
+                                    <th>Service Charge</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of application_service_charge; let i = index">
+                                    <td>{{i + 1}}</td>
+                                    <td>{{data.college_school_name}}</td>
+                                    <td>{{data.application_charges}}</td>
+                                    <td>{{data.service_charges}}</td>
+                                    <td>
+                                        <div class="text-center">
+                                            <i class="fa fa-pencil"></i>
+                                            &nbsp;&nbsp;
+                                            <i class="fa fa-trash "></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+    
+                        </table>
+                        <div class="row py-3 px-5 ">
+                            <ul class="pagination mx-auto">
+                                <li class="page-item"><a class="page-link">Previous</a></li>
+                                <li class="page-item"><a class="page-link">1</a></li>
+                                <li class="page-item"><a class="page-link" >2</a></li>
+                                <li class="page-item"><a class="page-link" >3</a></li>
+                                <li class="page-item"><a class="page-link" >Next</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+  
+    
+    <!-- /.content-wrapper -->
+    
+    </div>

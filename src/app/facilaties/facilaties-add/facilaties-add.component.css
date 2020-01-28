@@ -1,0 +1,53 @@
+.submit_button {
+    bottom: 20;
+    border: 2px solid #343a40!important;
+    border-radius: 25px;
+    background-color: #343a40!important;
+    width: 200px;
+    height: 40px
+}
+
+.font-color-white {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500
+}
+
+.card_view {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 25px
+}
+
+.txt_input {
+    margin-top: 3%
+}
+
+.facilaties_txt {
+    margin-top: 10px;
+    color: gray;
+    font-size: 14px;
+    font-weight: 400
+}
+
+.submit_button {
+    margin-top: 10px;
+    bottom: 20;
+    border: 2px solid #555555!important;
+    border-radius: 25px;
+    background-color: #555555!important;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+}
+
+.submit_button1 {
+    text-align: center;
+}
+
+.submit_txt {
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+}

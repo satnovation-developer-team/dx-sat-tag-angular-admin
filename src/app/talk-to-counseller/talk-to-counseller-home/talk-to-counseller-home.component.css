@@ -1,0 +1,25 @@
+.pzero , .card-header{
+    margin-bottom: 0 !important;
+}
+.input-group-text {
+    background-color: transparent !important;
+    border-left: none !important;
+}
+.editbg{
+    border-right: none !important;
+}
+.card{
+    border: none !important;
+    background-color: rgb(243, 239, 239);
+
+}
+/* .card-header{
+    padding:none !important;
+    background-color: white;
+} */
+.card-header {
+    padding: 0 !important;
+    margin-bottom: 0;
+    background-color: white !important;
+    border-bottom:none !important;
+}

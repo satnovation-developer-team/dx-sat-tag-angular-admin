@@ -1,0 +1,100 @@
+<div class="container">
+
+        <div class="row py-5">
+
+            <div class="col-sm-6">
+
+            </div>
+            <div class="col-sm-6">
+                <div class="ml">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><button class="btn btn-dark px-5 btn_border_radius">UPLOAD EXCEL
+                                FILE
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="card">
+        <div class="card-header bg-dark text-white">New Charges</div>
+            <form [formGroup]="applicationServiceChargeForm">
+
+                <div class="card-body p-5">
+        
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="education">Education</label>
+                                <select class="form-control" id="education" formControlName="education"
+                                [ngClass]="{ 'is-invalid': applicationServiceChargeSubmitted && applicationServiceChargeFormControl.education.errors }" >
+                                    <option>College </option>
+                                    <option>School</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="college_school_name">College/School Name</label>
+                                <input type="text" class="form-control" placeholder="Note:auto search should be done here" id="college_school_name" 
+                                formControlName="college_school_name" [ngClass]="{ 'is-invalid': applicationServiceChargeSubmitted && applicationServiceChargeFormControl.college_school_name.errors }">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="from_date">Form Date</label>
+                                <input class="form-control" placeholder="Type Here" id="from_date" type="date" formControlName="from_date" 
+                                [ngClass]="{ 'is-invalid': applicationServiceChargeSubmitted && applicationServiceChargeFormControl.from_date.errors }">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="to_date">To Date</label>
+                                <input class="form-control" placeholder="Type Here" id="to_date" type="date" formControlName="to_date"
+                                [ngClass]="{ 'is-invalid': applicationServiceChargeSubmitted && applicationServiceChargeFormControl.to_date.errors }">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="application_charge">Application Charge</label>
+                                <input class="form-control" placeholder="Type Here" id="application_charge" type="text" formControlName="application_charges"
+                                [ngClass]="{ 'is-invalid': applicationServiceChargeSubmitted && applicationServiceChargeFormControl.application_charges.errors }">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="service_charge">Service Charge</label>
+                                <input class="form-control" placeholder="Type Here" id="service_charge" type="text" formControlName="service_charges"
+                                [ngClass]="{ 'is-invalid': applicationServiceChargeSubmitted && applicationServiceChargeFormControl.service_charges.errors }">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="mx-auto pt-4">
+                            <button class="btn btn-dark px-5 btn_border_radius" (click)="applicationServiceChargeFormSubmit();">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+    </div>
+
+
+  
+    
+</div>

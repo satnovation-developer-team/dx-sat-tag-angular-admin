@@ -1,0 +1,96 @@
+<!-- Content Header (Page header) -->
+
+<div class="container">
+    <div class="row py-5">
+        <div class="col-sm-6">
+            <h3>Role Master </h3>
+        </div>
+        <div class="col-sm-6">
+            <ol class="breadcrumb float-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Role Master</li>
+            </ol>
+        </div>
+    </div>
+
+
+    <!-- ----TopHeader Start--- -->
+
+    <div class="row txt_inpt">
+
+
+        <div class="col-sm-6 ">
+            <div class="form-group">
+                <label for="usr">Role Name</label>
+                <input type="text " placeholder="Type Role Name ..." class="form-control " id="usr">
+            </div>
+        </div>
+
+        <div class="col-sm-6 txt_inpt ">
+            <label for="usr"></label>
+            <div class="dropdown ">
+                <button type="button" class="btn dropdown-toggle  btn_bg" data-toggle="dropdown">
+               Status
+                </button>
+                <div class="dropdown-menu droupdown_bg ">
+                    <a class="dropdown-item ">Active</a>
+                    <a class="dropdown-item ">In-Active</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----TopHeader End--- -->
+
+
+
+    <!-- Save start -->
+    <div class="row">
+        <div class="save_btn">
+            <button class="btn btn-dark btn_border_radius">Save</button>
+        </div>
+    </div>
+
+    <!-- Save start -->
+
+
+    <div class="row pb-5 tab_header">
+        <div class="col-12">
+            <div class="card">
+
+                <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Role Name</th>
+                                <th>Status</th>
+                                <th>Action</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of tabledata">
+                                <td>{{data.user_name}}</td>
+                                <td>{{data.mobile_number}}</td>
+                                <td>
+                                    <div class="text-center">
+                                        <i class="fa fa-pencil"></i> &nbsp;&nbsp;
+                                        <i class="fa fa-trash "></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+
+
+</div>

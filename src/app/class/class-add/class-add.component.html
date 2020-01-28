@@ -1,0 +1,364 @@
+<div class="container">
+    <div class="row py-5">
+
+        <div class="col-sm-6">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Class </a></li>
+                <li class="breadcrumb-item active">Add</li>
+            </ol>
+        </div>
+        <div class="col-sm-6">
+            <div class="ml">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><button class="btn btn-dark btn_border_radius">UPLOAD EXCEL
+                            FILE</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card p-5 mb-5">
+        <h5>Class Name</h5>
+        <br>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#information">Information</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#guide">Guide</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#overview">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#required_skill_set">Required Skill Set</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#eligibilty_criteria"> Eligibilty Criteria </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#enternace_exam_acceptable">Enterance Exam Acceptable</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#course_curriculum">Class Curriculum</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#recruiters">Job Profile and Recruiters</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+
+
+            <!-- overview tab content -->
+            <div id="information" class="container tab-pane active"><br>
+                <div style="height: 80vh;">
+                    <h5 class="pb-2">Image Upload</h5>
+
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="card" style="text-align: center;">
+                                <div class="form-group" style="height:16vh;padding-top:7vh">
+                                    <label _ngcontent-ovp-c17="" for="files" style="width:fit-content;background-color:transparent;letter-spacing:1px">
+                                        Upload</label>
+                                    <input type="file" class="form-control" id="files" hidden>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="title pt-2">
+                        <div style="float: left;">Class Name</div>
+                        <div style="float: right;">0/200</div><br>
+                        <div class="form-group">
+                            <input type="text" placeholder="Type here" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="select-specialization">
+                        <div style="float: left;">Category</div><br>
+                        <div class="form-group-lg">
+                            <select placeholder="Type here" class="form-control">
+                                <option>10 th</option>
+                                <!-- <option>UG</option>
+                                <option>After 12th</option> -->
+                            </select>
+                        </div>
+                        <div class="custom-control custom-checkbox pt-2">
+                            <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                            <label class="custom-control-label" for="customCheck">Area Of Interest</label>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class=" bg-secondary">
+                    <div class="row py-3 px-5">
+                        <button class="btn btn-dark ml-auto px-5" style="border-radius:30px;">Next</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- overview tab content -->
+
+
+            <div id="guide" class="container tab-pane fade" style="height: 100%;"><br>
+
+                <div style="height: 80vh;">
+                    <h5 class="pb-2">Upload Guide</h5>
+
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="card" style="text-align: center;">
+                                <div class="form-group" style="height:16vh;padding-top:7vh">
+                                    <label _ngcontent-ovp-c17="" for="files" style="width:fit-content;background-color:transparent;letter-spacing:1px">
+                                        Upload Pdf</label>
+                                    <input type="file" class="form-control" id="files" (input)="fileselect($event)" hidden>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" bg-secondary">
+                    <div class="row py-3">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4 ">
+                            <div class="btn_right">
+                                <button class="btn btn-default px-5" style="border-radius:30px;">Back</button>&nbsp;
+                                <button class="btn btn-dark px-5" style="border-radius:30px;">Next</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- </div> -->
+            </div>
+
+
+
+
+            <div id="overview" class="container tab-pane fade"><br>
+                <div style="height: 80vh;">
+
+                    <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+
+                </div>
+
+                <div class=" bg-secondary">
+                    <div class="row py-3">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4 ">
+                            <div class="btn_right">
+                                <button class="btn btn-default px-5" style="border-radius:30px;">Back</button>&nbsp;
+                                <button class="btn btn-dark px-5" style="border-radius:30px;">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div id="required_skill_set" class="container tab-pane fade"><br>
+                <div style="height: 80vh;">
+
+                    <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+
+                </div>
+                <div class=" bg-secondary">
+                    <div class="row py-3">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4 ">
+                            <div class="btn_right">
+                                <button class="btn btn-default px-5" style="border-radius:30px;">Back</button>&nbsp;
+                                <button class="btn btn-dark px-5" style="border-radius:30px;">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div id="eligibilty_criteria" class="container tab-pane fade"><br>
+                <div style="height: 80vh;">
+
+                    <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+
+                </div>
+                <div class=" bg-secondary">
+                    <div class="row py-3">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4 ">
+                            <div class="btn_right">
+                                <button class="btn btn-default px-5" style="border-radius:30px;">Back</button>&nbsp;
+                                <button class="btn btn-dark px-5" style="border-radius:30px;">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="enternace_exam_acceptable" class="container tab-pane fade"><br>
+                <div style="height: 80vh;">
+
+                    <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+
+                </div>
+                <div class=" bg-secondary">
+                    <div class="row py-3">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4 ">
+                            <div class="btn_right">
+                                <button class="btn btn-default px-5" style="border-radius:30px;">Back</button>&nbsp;
+                                <button class="btn btn-dark px-5" style="border-radius:30px;">Next</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="course_curriculum" class="container tab-pane fade"><br>
+                <div style="height: 80vh;">
+
+                    <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }"></ckeditor>
+
+                </div>
+
+                <div class=" bg-secondary">
+                    <div class="row py-3">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4 ">
+                            <div class="btn_right">
+                                <button class="btn btn-default px-5" style="border-radius:30px;">Back</button>&nbsp;
+                                <button class="btn btn-dark px-5" style="border-radius:30px;">Next</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div id="recruiters" class="container tab-pane fade"><br>
+
+                <div>
+
+                    <p>Job Profile Content</p>
+                    <ckeditor [data]="overviewData" [config]="{ height: [ [ '300' ] ] }"></ckeditor>
+                    <br><br>
+
+                    <p>Recruiters Content</p>
+                    <ckeditor [data]="overviewData" [config]="{ height: [ [ '300' ] ] }"></ckeditor>
+
+                    <div class="row pt-3">
+                        <div class="col-sm-4">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                <label class="custom-control-label" for="customCheck">ICICI Group</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                <label class="custom-control-label" for="customCheck">Tata consultancy Services custom
+                                    checkbox</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                <label class="custom-control-label" for="customCheck">United Nations Childrens
+                                    Fund(UNICEF)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pt-2">
+                        <div class="col-sm-4">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                <label class="custom-control-label" for="customCheck">ICICI Group</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                <label class="custom-control-label" for="customCheck">Tata consultancy Services custom
+                                    checkbox</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                <label class="custom-control-label" for="customCheck">United Nations Childrens
+                                    Fund(UNICEF)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pt-2">
+                        <div class="col-sm-4">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                <label class="custom-control-label" for="customCheck">ICICI Group</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                <label class="custom-control-label" for="customCheck">Tata consultancy Services custom
+                                    checkbox</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                <label class="custom-control-label" for="customCheck">United Nations Childrens
+                                    Fund(UNICEF)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+                <div class=" bg-secondary">
+                    <div class="row py-3">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4 ">
+                            <div class="btn_right">
+                                <button class="btn btn-default px-5" style="border-radius:30px;">Back</button>&nbsp;
+                                <button class="btn btn-dark px-5" style="border-radius:30px;">Next</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

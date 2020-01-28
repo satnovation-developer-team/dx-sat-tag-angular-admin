@@ -1,0 +1,154 @@
+<div class="container">
+
+    <div class="row py-5">
+
+        <div class="col-sm-6">
+
+        </div>
+        <div class="col-sm-6">
+            <div class="ml">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><button class="btn btn-dark px-5 btn_border_radius">UPLOAD EXCEL
+                            FILE
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="card">
+        <div class="card-header bg-dark text-white">New Location</div>
+        <form [formGroup]="locationForm">
+            <div class="card-body p-5" >
+                
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="location_name">Location Name</label>
+                            <input class="form-control" placeholder="Type Here" id="location_name" type="text" formControlName="location_name"
+                                [ngClass]="{ 'is-invalid': locationSubmitted && locationFormControl.location_name.errors }">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div *ngFor="let validation of locationFormValidations.location_name" class="mb-3">
+                    <div *ngIf="locationSubmitted && locationFormControl.location_name.errors">
+                        <span class="invalid-feedback d-block text-left"
+                            *ngIf="locationForm.get('location_name').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                    </div>
+                </div> -->
+                <!-- <span>test</span> -->
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="latitude">Latitude</label>
+                            <input class="form-control" placeholder="Type Here" id="latitude" type="text" formControlName="latitude"
+                                [ngClass]="{ 'is-invalid': locationSubmitted && locationFormControl.latitude.errors }">
+                        </div>
+                    </div>
+                    <!-- <div *ngFor="let validation of locationFormValidations.latitude" class="mb-3">
+                        <div *ngIf="locationSubmitted && locationFormControl.latitude.errors">
+                            <span class="invalid-feedback d-block text-left"
+                                *ngIf="locationForm.get('latitude').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                        </div>
+                    </div> -->
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="longitude">Longitude</label>
+                            <input class="form-control" placeholder="Type Here" id="longitude" type="text" formControlName="longitude"
+                                [ngClass]="{ 'is-invalid': locationSubmitted && locationFormControl.longitude.errors }">
+                        </div>
+                    </div>
+                    <!-- <div *ngFor="let validation of locationFormValidations.longitude" class="mb-3">
+                        <div *ngIf="locationSubmitted && locationFormControl.longitude.errors">
+                            <span class="invalid-feedback d-block text-left"
+                                *ngIf="locationForm.get('longitude').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                        </div>
+                    </div> -->
+                </div>
+
+
+                <div class="row">
+                    <div class="mx-auto pt-4">
+                        <button class="btn btn-dark px-5 btn_border_radius" (click)="locationFormSubmit()">Submit</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+
+
+        <div class="row py-5">
+            <div class="col-2"></div>
+            <div class="col-8">
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+
+                            <div class="mr-0 entries">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text entry">show</span>
+                                    </div>
+                                    <select  class="form-control">
+                                        <option>1-7</option>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text entry">entries</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ml-0 search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"> <i class="fa fa-search"
+                                                aria-hidden="true"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Sr#</th>
+                                    <th>Location Name</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of location; let i = index">
+                                    <td>{{i + 1}}</td>
+                                    <td>{{data.location_name}}</td>
+
+                                    <td>
+                                        <div class="text-center">
+                                            <i class="fa fa-pencil pr-2 "></i>
+                                            <i class="fa fa-trash "></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+
+
+
+</div>

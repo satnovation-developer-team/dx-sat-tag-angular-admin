@@ -1,0 +1,169 @@
+.nav-tabs .nav-link.active {
+    color: #00aea1;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-color: #fff;
+    border-bottom: 3px solid #00aea1;
+}
+
+.paragraph_heading {
+    color: #00aea1;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+a {
+    color: #586a6e;
+    text-decoration: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.change_btn {
+    background-color: #ff9a39;
+    color: white;
+    border-radius: 20px;
+}
+
+.profile_btn {
+    background-color: #ff9a39;
+    color: white;
+    border-radius: 20px;
+}
+
+.nav_style {
+    /* background: #00ada2; */
+    color: white;
+}
+
+.color_ffa811 {
+    color: #ffa811 !important;
+}
+
+.applied_btn {
+    border-radius: 20px;
+    border: 1px solid grey;
+}
+
+.paynow_btn {
+    border-radius: 20px;
+    border: 1px solid #ff9a39;
+    background-color: #ff9a39;
+    color: white;
+}
+
+.applied_row_border {
+    border: 1px solid #f6f6f6;
+}
+
+.question_submit_btn {
+    background-color: #ff9a39;
+    color: white;
+}
+
+.activity_question_border {
+    border: 1px solid #f6f6f6;
+}
+
+
+/* ASW */
+
+.nav-item {
+    padding: 1vw;
+}
+
+.fontstyle {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.fontweight {
+    font-weight: bold;
+}
+
+.container-fluid {
+    padding: 0 !important;
+}
+
+.afternav {
+    background-image: url('http://2.citynews-genovatoday.stgy.ovh/~media/original-hi/57841679212311/leggere-libri-online-2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+}
+
+.layer {
+    background-color: rgba(83, 82, 82, 0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.imageoverlap {
+    margin-top: -100px;
+    /* position:absolute; */
+}
+
+.img1 {
+    width: 30%;
+    height: 30%;
+}
+
+@media screen and (max-width: 600px) {
+    .py-1 {
+        font-size: 12px;
+    }
+    p {
+        font-size: 12px;
+    }
+    ul {
+        padding: 0 !important;
+    }
+}
+
+
+/* ASW */
+
+.btn_border_radius{
+    border-radius: 30px;
+/* float: center; */
+}
+.d-inline.mx-auto.center {
+    text-align: center!important;
+    display:block!important;
+}
+.card-title {
+    margin-bottom: 0 !important;
+  }
+  .entry{
+    background-color: transparent !important;
+    border: none !important;
+    
+  }
+  .search{
+    float: right;
+  }
+  .entries{
+    float: left;
+  }
+  .question{
+      background-color: orange;
+      color: white;
+  }
+  /* .collapsed{color: white;} */
+  .addnew{
+      border:none !important
+  }
+  .btn_border_radius{
+    border-radius: 30px;
+}
+.card-header {
+    padding: 0 !important;
+}
+.checked {
+    color: orange;
+  }

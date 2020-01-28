@@ -1,0 +1,69 @@
+.card-title {
+    margin-bottom: 0 !important;
+}
+
+.entry {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.search {
+    float: right;
+}
+
+.entries {
+    float: left;
+}
+
+.txt_inpt {
+    width: 100%;
+}
+
+.btn_bg {
+    margin-left: 3%;
+    border-color: #000;
+    width: 50%;
+    border-radius: 5px;
+    border: 1 solid #212222;
+    background-color: #fff;
+}
+
+.droupdown_bg {
+    text-align: center;
+    width: 50%;
+}
+
+.save_btn {
+    margin-top: 1%;
+    width: 100%;
+    text-align: center;
+}
+
+.btn_border_radius {
+    width: 200px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: #212222;
+}
+
+.tab_header {
+    margin-top: 5%;
+}
+
+.select_all {
+    margin-top: 5%;
+    margin-left: 1%;
+}
+
+.select_all_txt {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #212222;
+    font-weight: 400;
+}
+
+.cad_header {
+    margin-top: 2%;
+    width: 90%;
+    text-align: center;
+}

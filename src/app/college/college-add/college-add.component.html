@@ -1,0 +1,1322 @@
+<div class="container">
+
+        <div class="row py-5">
+
+            <div class="col-sm-6">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <h3>college</h3>
+                    </li>
+                    <!-- <li class="breadcrumb-item active">Add Course</li> -->
+                </ol>
+            </div>
+            <div class="col-sm-6">
+                <div class="ml">
+                    <button class="btn btn-dark btn_border_radius" [routerLink]="['/colleg_login']">Create Login</button>
+                </div>
+            </div>
+        </div>
+  
+
+    <div class="row">
+        <div class="col-sm-12">
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#information">Information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#college_single_page">College Single Page</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div class="tab-content">
+
+        <div id="information" class="container tab-pane active" [formGroup]="informationForm"><br>
+
+            <div>
+                <h5 class="pb-2">Image Upload</h5>
+
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="card" style="text-align: center;">
+                            <div class="form-group" style="height:16vh;padding-top:7vh">
+                                <label _ngcontent-ovp-c17="" for="image_upload"
+                                    style="width:fit-content;background-color:transparent;letter-spacing:1px">
+                                    Upload</label>
+                                <input type="file" class="form-control" id="image_upload" formControlName="image_upload" (input)="fileselect($event)"
+                                [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.image_upload.errors }" hidden>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngFor="let validation of informationFormValidations.image_upload" class="mb-3">
+                    <div *ngIf="informationSubmitted && informationFormControl.image_upload.errors">
+                        <span class="invalid-feedback d-block text-left"
+                            *ngIf="informationForm.get('image_upload').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                    </div>
+                </div>
+
+                <div class="row bg">
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="university_name">University Name</label>
+                                <input type="text" placeholder="University Name" id="university_name" formControlName="university_name" 
+                                [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.university_name.errors }" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+
+
+                <div class="row bg">
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="college_name">College/University Name</label>
+                                <input type="text" placeholder="College Name" id="college_name" formControlName="college_name" 
+                                [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.college_name.errors }" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 py-2">
+                        <!-- <div class="select-specialization">
+                            <div class="form-group-lg  py-2">
+                                <label for="upload_brouchers">UploadBrouchers (pdf)</label>
+                                <input type="text" id="upload_brouchers" placeholder="UploadBrouchers (pdf)"
+                                    class="form-control">
+                            </div>
+                        </div> -->
+                        <div class="card" style="text-align: center;">
+                            <div class="form-group" style="height:16vh;padding-top:7vh">
+                                <label _ngcontent-ovp-c17="" for="broucher_upload"
+                                    style="width:fit-content;background-color:transparent;letter-spacing:1px">
+                                    UploadBrouchers (pdf)</label>
+                                <input type="file" class="form-control" id="broucher_upload" formControlName="broucher_upload"  (input)="fileselect($event)"
+                                [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.broucher_upload.errors }" hidden>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngFor="let validation of informationFormValidations.broucher_upload" class="mb-3">
+                        <div *ngIf="informationSubmitted && informationFormControl.broucher_upload.errors">
+                            <span class="invalid-feedback d-block text-left"
+                                *ngIf="informationForm.get('broucher_upload').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row bg">
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="college_type">College Type</label>
+                                <select class="form-control" id="college_type" formControlName="college_type_id"
+                                [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.college_type_id.errors }">
+                                    <option *ngFor="let collegetypes of collegetype" [value]="collegetypes.id">{{collegetypes.college_type}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="location">College Location</label>
+                                <select class="form-control" id="location" formControlName="locations_id"
+                                [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.locations_id.errors }">
+                                    <option *ngFor="let locations of location" [value]="locations.id">{{locations.location_name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row bg">
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="placement">Placement</label>
+                                <select class="form-control" id="placement" formControlName="placements_id"
+                                [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.placements_id.errors }" >
+                                    <option *ngFor="let placements of placement" [value]="placements.id">{{placements.placement_name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="accreditation">Accreditation</label>
+                                <select class="form-control" id="accreditation" formControlName="accreditations_id"
+                                [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.accreditations_id.errors }">
+                                    <option *ngFor="let accreditations of accreditation" [value]="accreditations.id">{{accreditations.accreditation_name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row bg">
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="ownership">Ownership</label>
+                                <select class="form-control" id="ownership" formControlName="ownerships_id"
+                                [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.ownerships_id.errors }">
+                                    <option *ngFor="let ownerships of ownership" [value]="ownerships.id">{{ownerships.ownership_name}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="approval">Approval</label>
+                                <select class="form-control" id="approval" formControlName="approvals_id"
+                                [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.approvals_id.errors }">
+                                    <option *ngFor="let approvals of approval" [value]="approvals.id">{{approvals.approval_name}}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row bg">
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="select Offer">Select Offer</label>
+                                <select class="form-control" id="select Offer" formControlName="offers_id"
+                                [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.offers_id.errors }">
+                                    <option *ngFor="let offer of offers" [value]="offer.id">{{offer.offers}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="application_charges">Application Charges</label>
+                                <select class="form-control" id="application_charges" formControlName="application_charges_id"
+                                [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.application_charges_id.errors }">
+                                    <option *ngFor="let appcharges of appcharge" [value]="appcharges.id">{{appcharges.app_charges}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row bg">
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="service_charges">Service Charges</label>
+                                <select class="form-control" id="service_charges" formControlName="service_charges_id" 
+                                [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.service_charges_id.errors }"required>
+                                    <option *ngFor="let servicecharges of servicecharge" [value]="servicecharges.id">{{servicecharges.service_charges}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 py-2">
+                        <div class="select-specialization">
+                            <div class="form-group-lg py-2">
+                                <label for="rank_college">Rank</label>
+                                <select class="form-control" id="rank_college" formControlName="rank_id" required
+                                [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.rank_id.errors }">
+                                    <option *ngFor="let ranks of rank" [value]="ranks.id">{{ranks.rank}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="checkbox-inline"><input type="checkbox" value="" formControlName="featured" disabled>Featured</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="checkbox-inline"><input type="checkbox" value="" formControlName="top_colleges" disabled>Top Colleges</label>
+                        </div>
+                    </div>
+                </div>
+        
+                
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Review Part</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Maximum Value</label>
+                    </div>
+                </div>
+
+                <!-- <div [formGroup]="reviewPartForm"> -->
+                    <div formArrayName="review_part">
+                        <div *ngFor="let itemrow of informationForm.controls.review_part.controls; let i=index"  [formGroupName]="i">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <!-- <input type="text" class="form-control" value="Placements" disabled> -->
+                                        <input type="text" class="form-control" formControlName="placements" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <select class="form-control" formControlName="placement_maxval"
+                                        [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.placement_maxval.errors }">
+                                            <option [ngValue]='1'>1</option>
+                                            <option [ngValue]='2'>2</option>
+                                            <option [ngValue]='3'>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <!-- <input type="text" class="form-control" value="Infrastructure" disabled> -->
+                                        <input type="text" class="form-control" formControlName="infrastructure" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <select class="form-control" formControlName="infrastructure_maxval"
+                                        [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.infrastructure_maxval.errors }">
+                                            <option [ngValue]='1'>1</option>
+                                            <option [ngValue]='2'>2</option>
+                                            <option [ngValue]='3'>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <!-- <input type="text" class="form-control" value="Faculty & Course Curriculum" disabled> -->
+                                        <input type="text" class="form-control" formControlName="faculty" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <select class="form-control" formControlName="faculty_maxval"
+                                        [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.faculty_maxval.errors }">
+                                            <option [ngValue]='1'>1</option>
+                                            <option [ngValue]='2'>2</option>
+                                            <option [ngValue]='3'>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <!-- <input type="text" class="form-control" value="Crowd & Campus Life" disabled> -->
+                                        <input type="text" class="form-control" formControlName="campuslife" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <select class="form-control" formControlName="campuslife_maxval"
+                                        [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.campuslife_maxval.errors }">
+                                            <option [ngValue]='1'>1</option>
+                                            <option [ngValue]='2'>2</option>
+                                            <option [ngValue]='3'>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <!-- <input type="text" class="form-control" value="Value for Money" disabled> -->
+                                        <input type="text" class="form-control" formControlName="value_for_money" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <select class="form-control" formControlName="value_formoney_maxval"
+                                        [ngClass]="{ 'is-invalid': informationSubmitted && informationFormControl.value_formoney_maxval.errors }">
+                                            <option [ngValue]='1'>1</option>
+                                            <option [ngValue]='2'>2</option>
+                                            <option [ngValue]='3'>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                <!-- </div> -->
+                <div [formGroup]="dynamicFieldForm">
+                    <div formArrayName="dynamic_fields">
+                        <div *ngFor="let itemrow of dynamicFieldForm.controls.dynamic_fields.controls; let i=index" [formGroupName]="i">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" formControlName="key" 
+                                        [ngClass]="{ 'is-invalid': dynamicFieldSubmitted && dynamicFieldFormControl.key.errors }">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <select class="form-control" formControlName="value" 
+                                        [ngClass]="{ 'is-invalid': dynamicFieldSubmitted && dynamicFieldFormControl.value.errors }">
+                                            <option [ngValue]='1'>1</option>
+                                            <option [ngValue]='2'>2</option>
+                                            <option [ngValue]='3'>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <button class="btn" (click)="addNewReviewPart();">+Add Section</button>
+                </div>
+                <!-- add course  -->
+                <div [formGroup]="courseForm">
+                    <div class="row" formArrayName="courses">
+                        <div *ngFor="let itemrow of courseForm.controls.courses.controls; let i=index"  [formGroupName]="i">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <br>
+                                    <button class="btn btn-dark btn_border_radius" (click)="addNewCourse();">+Add Course</button>
+                                </div>
+                            </div>
+                        
+                            <div class="course_list">
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h4 class="text-left"> Course List {{ i + 1 }}</h4>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="text-right"><button class="btn btn-danger btn-sm" *ngIf="courseForm.controls.courses.controls.length > 1" (click)="deleteRow(i)">Remove</button></div>
+                                    </div>
+                                </div>
+                                <br>
+                        
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group-lg py-2">
+                                            <label for="course_name">Course Name</label>
+                                            <select class="form-control" id="course_name" formControlName="course_id" required>
+                                                <option *ngFor="let courses of course" [value]="courses.id">{{courses.course_name}}
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group-lg py-2">
+                                            <label for="course_year">Course Year</label>
+                                            <input type="text" id="course_year" class="form-control" formControlName="course_year" placeholder="Course Year" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group-lg py-2">
+                                            <label for="admission">Admission</label>
+                                            <select class="form-control" id="admission" formControlName="admission_id" required>
+                                                <option *ngFor="let admissions of admission" [value]="admissions.id">{{admissions.admission_status}}
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                        
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group-lg py-2">
+                                            <label for="accreditation">Accreditation</label>
+                                            <select class="form-control" id="accreditation" formControlName="accreditation_id" required>
+                                                <option *ngFor="let accreditations of accreditation" [value]="accreditations.id">{{accreditations.accreditation_name}}
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group-lg py-2">
+                                            <label for="specialization">Specialization</label>
+                                            <select class="form-control" id="specialization" formControlName="specialization_id" required>
+                                                <option *ngFor="let specializations of specialization" [value]="specializations.id">{{specializations.specialization_name}}
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group-lg py-2">
+                                            <label for="course_status">Course Status</label>
+                                            <select class="form-control" id="course_status" formControlName="course_status_id" required>
+                                                <option *ngFor="let course_status of coursestatus" [value]="course_status.id">{{course_status.course_status_name}}
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                        
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group-lg py-2">
+                                            <label for="course_deamnd">Course Demand</label>
+                                            <select class="form-control" id="course_deamnd" formControlName="course_demand_id" required>
+                                                <option *ngFor="let coursedemands of coursedemand" [value]="coursedemands.id">{{coursedemands.course_demand}}
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group-lg py-2">
+                                            <label for="mode_of_study">Mode of Study</label>
+                                            <select class="form-control" id="mode_of_study" required multiple="multiple" formControlName="mode">
+                                                <option *ngFor="let modeofstudys of modeofstudy" [value]="modeofstudys.mode_of_study_name">{{modeofstudys.mode_of_study_name}}
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group-lg py-2">
+                                            <label for="approval">Approval</label>
+                                            <select class="form-control" id="approval" formControlName="approvals_id" required>
+                                                <option *ngFor="let approvals of approval" [value]="approvals.id">{{approvals.approval_name}}
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                        
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group-lg py-2">
+                                            <label for="rank">Rank</label>
+                                            <select class="form-control" id="rank" formControlName="rank_id" required>
+                                                <option *ngFor="let ranks of rank" [value]="ranks.id">{{ranks.rank}}
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                        
+                                </div>
+                                <br>
+                        
+                            </div>
+                        
+                        </div>
+                        
+                        <!-- add course -->
+                        </div>
+                        
+                        </div>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <a class="btn btn-dark ml-auto px-5" style="border-radius:30px;" data-toggle="tab"
+                                (click)="informationFormSubmit()">Submit</a>
+                        </div>
+                    </div>
+        </div>
+
+
+
+
+
+        <div id="college_single_page" class="container tab-pane fade active"><br>
+
+
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">Admission Eligibilty
+                        Criteria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">Enterance Exam
+                        Acceptable</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"> Gallery </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">Events
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">Scholership</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">Q&A</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">Article</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">Contact</a>
+                </li>
+            </ul>
+
+
+            <div class="tab-content">
+
+
+                <!-- overview tab content -->
+                <div id="overview" class="container tab-pane active" [formGroup]="overviewForm"><br>
+                    <p>Overview</p>
+                    <div>
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }" formControlName="overview"
+                            [ngClass]="{ 'is-invalid': overviewSubmitted && overviewFormControl.overview.errors }"></ckeditor>
+                    </div>
+
+                    <div *ngFor="let validation of overviewFormValidations.overview" class="mb-3">
+                        <div *ngIf="overviewSubmitted && overviewFormControl.overview.errors">
+                            <span class="invalid-feedback d-block text-left"
+                                *ngIf="overviewForm.get('overview').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                        </div>
+                    </div>
+
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3 px-5">
+                            <a class="btn btn-dark ml-auto px-5" style="border-radius:30px;" data-toggle="tab"
+                                (click)="overviewFormSubmit('#admission_eligibilty_criteria')">Next</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- overview tab content -->
+
+
+                <!-- Admission Eligibilty Criteria tab content -->
+                <div id="admission_eligibilty_criteria" class="container tab-pane fade" [formGroup]="admissionEligibiltyCriteriaForm">
+                    <br>
+                    <p>Admission Eligibilty Criteria</p>
+                    <div>
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }" formControlName="eligibility_criteria"
+                            [ngClass]="{ 'is-invalid': admissionEligibiltyCriteriaSubmitted && admissionEligibiltyCriteriaFormControl.eligibility_criteria.errors }">
+                        </ckeditor>
+                    </div>
+                
+                    <div *ngFor="let validation of admissionEligibiltyCriteriaFormValidations.eligibility_criteria" class="mb-3">
+                        <div
+                            *ngIf="admissionEligibiltyCriteriaSubmitted && admissionEligibiltyCriteriaFormControl.eligibility_criteria.errors">
+                            <span class="invalid-feedback d-block text-left"
+                                *ngIf="admissionEligibiltyCriteriaForm.get('eligibility_criteria').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3">
+                            <div class="col-sm-8"></div>
+                            <div class="col-sm-4 ">
+                                <div class="btn_right">
+                                    <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="navigateBack('#overview','#admission_eligibilty_criteria')">Back</a>&nbsp;
+                                    <a class="btn btn-dark ml-auto px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="admissionEligibiltyCriteriaFormSubmit('#enterance_exam_acceptable')">Next</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Admission Eligibilty Criteria tab content -->
+
+                <!--Enterance Exam Acceptable tab content -->
+                <div id="enterance_exam_acceptable" class="container tab-pane fade" [formGroup]="enteranceExamAcceptableForm"><br>
+                    <div>
+
+                        <div class="row pt-3">
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="gate" name="GATE" formControlName="GATE">
+                                    <label class="custom-control-label" for="gate">Gate</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="jee" name="JEEE" formControlName="JEEE">
+                                    <label class="custom-control-label" for="jee">JEE</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="py-5">
+                            <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }" formControlName="entrance_exam"
+                                [ngClass]="{ 'is-invalid': enteranceExamAcceptableSubmitted && enteranceExamAcceptableFormControl.entrance_exam.errors }">
+                            </ckeditor>
+                        </div>
+
+                        <div *ngFor="let validation of enteranceExamAcceptableFormValidations.entrance_exam" class="mb-3">
+                            <div
+                                *ngIf="enteranceExamAcceptableSubmitted && enteranceExamAcceptableFormControl.entrance_exam.errors">
+                                <span class="invalid-feedback d-block text-left"
+                                    *ngIf="enteranceExamAcceptableForm.get('entrance_exam').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3">
+                            <div class="col-sm-8"></div>
+                            <div class="col-sm-4 ">
+                                <div class="btn_right">
+                                    <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="navigateBack('#admission_eligibilty_criteria','#enterance_exam_acceptable')">Back</a>&nbsp;
+                                    <a class="btn btn-dark ml-auto px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="enteranceExamAcceptableFormSubmit('#facilities')">Next</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Enterance Exam Acceptable tab content -->
+
+                <!--Facilities tab content -->
+                <div id="facilities" class="container tab-pane fade" [formGroup]="facilitiesForm"><br>
+
+                    <div>
+                        <div class="row pt-3">
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="class_room" name="class_room" formControlName="class_room">
+                                    <label class="custom-control-label" for="class_room">A/C Classrooms</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="auditorium" name="auditorium" formControlName="auditorium">
+                                    <label class="custom-control-label" for="auditorium">Auditorium</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3">
+                            <div class="col-sm-8"></div>
+                            <div class="col-sm-4 ">
+                                <div class="btn_right">
+                                    <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="navigateBack('#enterance_exam_acceptable','#facilities')">Back</a>&nbsp;
+                                    <a class="btn btn-dark ml-auto px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="facilitiesFormSubmit('#gallery')">Next</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Facilities tab content -->
+
+
+                <!--Gallery tab content -->
+                <div id="gallery" class="container tab-pane fade" [formGroup]="galleryForm"><br>
+
+                    <div>
+                        <div class="category_list mt-3 shadow-lg p-3 mb-3 bg-white rounded">
+                            <h3 style="font-weight: bold;">Category List</h3>
+                            <!-- <hr> -->
+                            <div class="row py-3">
+                                <div class="col-sm-3 px-3">
+                                    <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6iT3tkvd-EY5O1aVDD6wak6rA6VmnVWBN8DMBXjEP4db3O2dz&s">
+                                </div>
+                                <div class="col-sm-3 px-3">
+                                    <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6iT3tkvd-EY5O1aVDD6wak6rA6VmnVWBN8DMBXjEP4db3O2dz&s">
+                                </div>
+                                <div class="col-sm-3 px-3">
+                                    <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6iT3tkvd-EY5O1aVDD6wak6rA6VmnVWBN8DMBXjEP4db3O2dz&s">
+                                </div>
+                                <div class="col-sm-3 px-3">
+                                    <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6iT3tkvd-EY5O1aVDD6wak6rA6VmnVWBN8DMBXjEP4db3O2dz&s">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <h3 class="pt-5" style="font-weight: bold;">Add New Gallery Category</h3>
+                        <hr>
+                        <h5 class="pb-2">Category Image</h5>
+
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="card" style="text-align: center;">
+                                    <div class="form-group" style="height:16vh;padding-top:7vh">
+                                        <label _ngcontent-ovp-c17="" for="category_image_upload"
+                                            style="width:fit-content;background-color:transparent;letter-spacing:1px">
+                                            Upload</label>
+                                        <input type="file" class="form-control" id="category_image_upload" formControlName="category_image_upload" (input)="fileselect($event)" hidden
+                                        [ngClass]="{ 'is-invalid': gallerySubmitted && galleryFormControl.category_image_upload.errors }">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngFor="let validation of galleryFormValidations.category_image_upload" class="mb-3">
+                            <div *ngIf="gallerySubmitted && galleryFormControl.category_image_upload.errors">
+                                <span class="invalid-feedback d-block text-left"
+                                    *ngIf="galleryForm.get('category_image_upload').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                            </div>
+                        </div>
+
+
+                        <div class="row bg">
+                            <div class="col-sm-12 py-2 pb-5">
+                                <div class="select-Category">
+                                    <div class="form-group-lg py-2">
+                                        <label for="category_name">Category Name</label>
+                                        <input type="text" placeholder="Type here" id="category_name" formControlName="category_name" class="form-control"
+                                        [ngClass]="{ 'is-invalid': gallerySubmitted && galleryFormControl.category_name.errors }">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngFor="let validation of galleryFormValidations.category_name" class="mb-3">
+                            <div *ngIf="gallerySubmitted && galleryFormControl.category_name.errors">
+                                <span class="invalid-feedback d-block text-left"
+                                    *ngIf="galleryForm.get('category_name').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3">
+                            <div class="col-sm-8"></div>
+                            <div class="col-sm-4 ">
+                                <div class="btn_right">
+                                    <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="navigateBack('#facilities','#gallery')">Back</a>&nbsp;
+                                    <a class="btn btn-dark ml-auto px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="galleryFormSubmit('#events')">Next</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Gallery tab content -->
+
+
+                <!--Event Acceptable tab content -->
+                <div id="events" class="container tab-pane fade" [formGroup]="eventsForm"><br>
+                    <div style="min-height: 80vh;">
+                            <div class="row">
+                                <div class="col-12">
+
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Events List</h3>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <table id="example1" class="table table-bordered table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sr#</th>
+                                                        <th>Event Image</th>
+                                                        <th>Event Name</th>
+                                                        <th>Event Date</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr *ngFor="let data of events;  let i = index">
+                                                        <td>{{i+1}}</td>
+                                                        <td>{{data.event_image_upload}}</td>
+                                                        <td>{{data.event_name}}</td>
+                                                        <td>{{data.event_date}}</td>
+                                               
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <i class="fa fa-pencil"
+                                                                    [routerLink]="['/recruiters_edit']"></i>
+                                                                &nbsp;&nbsp;
+                                                                <i class="fa fa-trash "></i>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                        <!-- /.card-body -->
+                                    </div>
+                                    <!-- /.card -->
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+                     
+
+
+                        <h3 class="pt-5" style="font-weight: bold;">Add New Event Category</h3>
+                        <hr>
+                        <h5 class="pb-2">Event Image</h5>
+
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="card" style="text-align: center;">
+                                    <div class="form-group" style="height:16vh;padding-top:7vh">
+                                        <label _ngcontent-ovp-c17="" for="event_image_upload"
+                                            style="width:fit-content;background-color:transparent;letter-spacing:1px">
+                                            Upload</label>
+                                        <!-- <input type="file" class="form-control" id="files" hidden> -->
+                                        <input type="file" class="form-control" id="event_image_upload" formControlName="event_image_upload" (input)="fileselect($event)" hidden
+                                            [ngClass]="{ 'is-invalid': eventsSubmitted && eventsFormControl.event_image_upload.errors }">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngFor="let validation of eventsFormValidations.event_image_upload" class="mb-3">
+                            <div *ngIf="eventsSubmitted && eventsFormControl.event_image_upload.errors">
+                                <span class="invalid-feedback d-block text-left"
+                                    *ngIf="eventsForm.get('event_image_upload').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                            </div>
+                        </div>
+
+
+                        <div class="row bg">
+                            <div class="col-sm-6 py-2 pb-5">
+                                <div class="select-Category">
+                                    <div class="form-group-lg py-2">
+                                        <label for="event_name">Event Name</label>
+                                        <!-- <input type="text" placeholder="Event Name" id="event_name"
+                                            class="form-control"> -->
+                                            <input type="text" placeholder="Event Name" id="event_name" formControlName="event_name" class="form-control"
+                                                [ngClass]="{ 'is-invalid': eventsSubmitted && eventsFormControl.event_name.errors }">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div *ngFor="let validation of eventsFormValidations.event_name" class="mb-3">
+                                <div *ngIf="eventsSubmitted && eventsFormControl.event_name.errors">
+                                    <span class="invalid-feedback d-block text-left"
+                                        *ngIf="eventsForm.get('event_name').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                                </div>
+                            </div> -->
+                            <div class="col-sm-6 py-2 pb-5">
+                                <div class="select-Category">
+                                    <div class="form-group-lg py-2">
+                                        <label for="event_date">Event Date</label>
+                                        <input type="date" placeholder="Select Event Date" id="event_date" formControlName="event_date" class="form-control"
+                                                [ngClass]="{ 'is-invalid': eventsSubmitted && eventsFormControl.event_date.errors }">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div *ngFor="let validation of eventsFormValidations.event_date" class="mb-3">
+                                <div *ngIf="eventsSubmitted && eventsFormControl.event_date.errors">
+                                    <span class="invalid-feedback d-block text-left"
+                                        *ngIf="eventsForm.get('event_date').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <div class="row bg">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="event_description">Event Description</label>
+                                    <textarea class="form-control" rows="5" id="event_description" formControlName="event_description"
+                                        placeholder="Event Description" [ngClass]="{ 'is-invalid': eventsSubmitted && eventsFormControl.event_description.errors }"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div *ngFor="let validation of eventsFormValidations.event_description" class="mb-3">
+                            <div *ngIf="eventsSubmitted && eventsFormControl.event_description.errors">
+                                <span class="invalid-feedback d-block text-left"
+                                    *ngIf="eventsForm.get('event_description').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3">
+                            <div class="col-sm-8"></div>
+                            <div class="col-sm-4 ">
+                                <div class="btn_right">
+                                    <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="navigateBack('#gallery','#events')">Back</a>&nbsp;
+                                    <a class="btn btn-dark ml-auto px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="eventsFormSubmit('#scholarship')">Next</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--Event Acceptable tab content -->
+
+
+
+                <!--scholarship tab content -->
+                <div id="scholarship" class="container tab-pane fade" [formGroup]="scholarshipForm"><br>
+
+                    <div>
+                        <p>Scholarship</p>
+                        <ckeditor [data]="overviewData" [config]="{ height: [ [ '400' ] ] }" formControlName="scholarship"
+                            [ngClass]="{ 'is-invalid': scholarshipSubmitted && scholarshipFormControl.scholarship.errors }"></ckeditor>
+                    </div>
+
+                    <div *ngFor="let validation of scholarshipFormValidations.scholarship" class="mb-3">
+                        <div *ngIf="scholarshipSubmitted && scholarshipFormControl.scholarship.errors">
+                            <span class="invalid-feedback d-block text-left"
+                                *ngIf="scholarshipForm.get('scholarship').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3">
+                            <div class="col-sm-8"></div>
+                            <div class="col-sm-4 ">
+                                <div class="btn_right">
+                                    <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="navigateBack('#events','#scholarship')">Back</a>&nbsp;
+                                    <a class="btn btn-dark ml-auto px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="scholarshipFormSubmit('#qa')">Next</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--scholarship tab content -->
+
+
+                <!--Q&A tab content -->
+                <div id="qa" class="container tab-pane fade" [formGroup]="qaForm"><br>
+                    <div formArrayName="college_question">
+                        <div *ngFor="let itemrow of qaForm.controls.college_question.controls; let i=index"  [formGroupName]="i">
+                            <div class="card">
+                                <div class="card-title px-3 pt-2">
+                                    <h3 style="float: left;">New Questions?</h3>
+                                    <p style="float: right;">
+                                        <span> <i class="fa fa-pencil"></i>&nbsp;
+                                            <i class="fa fa-trash "></i></span></p>
+                                </div>
+                                <div class="card-body px-3">
+                                    New Question Ans.
+                                </div>
+                            </div>
+
+
+                            <div class="row bg">
+                                <div class="col-sm-12 py-2 pb-5">
+                                    <div class="select-Category">
+                                        <div class="form-group-lg py-2">
+                                            <label for="question"> Question</label>
+                                            <!-- <input type="text" placeholder="Type here" id="question" formControlName="question" class="form-control"
+                                            [ngClass]="{ 'is-invalid': qaSubmitted && qaFormControl.question.errors }" required> -->
+                                            <input type="text" placeholder="Type here" id="question" formControlName="question" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div *ngFor="let validation of qaFormValidations.question" class="mb-3">
+                                <div *ngIf="qaSubmitted && qaFormControl.question.errors">
+                                    <span class="invalid-feedback d-block text-left"
+                                        *ngIf="qaForm.get('question').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                                </div>
+                            </div> -->
+
+                            <div class="row bg">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="answers">Answers</label>
+                                        <!-- <textarea class="form-control" rows="5" id="answers" placeholder="Answers" formControlName="answers"
+                                        [ngClass]="{ 'is-invalid': qaSubmitted && qaFormControl.answers.errors }" required></textarea> -->
+                                        <textarea class="form-control" rows="5" id="answers" placeholder="Answers" formControlName="answers" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div *ngFor="let validation of qaFormValidations.answers" class="mb-3">
+                                <div *ngIf="qaSubmitted && qaFormControl.answers.errors">
+                                    <span class="invalid-feedback d-block text-left"
+                                        *ngIf="qaForm.get('answers').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                                </div>
+                            </div> -->
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="ml-0"><button class="btn btn-dark btn_border_radius" (click)="addNewQA()">+Add More</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3">
+                            <div class="col-sm-8"></div>
+                            <div class="col-sm-4 ">
+                                <div class="btn_right">
+                                    <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="navigateBack('#scholarship','#qa')">Back</a>&nbsp;
+                                    <a class="btn btn-dark ml-auto px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="qaFormSubmit('#article')">Next</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--Q&A tab content -->
+
+
+                <!--Article tab content -->
+                <div id="article" class="container tab-pane fade" [formGroup]="articleForm"><br>
+                    <div formArrayName="college_article">
+                        <div *ngFor="let itemrow of articleForm.controls.college_article.controls; let i=index"  [formGroupName]="i">
+                            <div class="card">
+                                <div class="card-title px-3 pt-2">
+                                    <h3 style="float: left;">New Article?</h3>
+                                    <p style="float: right;">
+                                        <span> <i class="fa fa-pencil"></i>&nbsp;
+                                            <i class="fa fa-trash "></i></span></p>
+                                </div>
+                                <div class="card-body px-3">
+                                    Article Desc.
+                                </div>
+                            </div>
+
+
+                            <div class="row bg">
+                                <div class="col-sm-12 py-2 pb-5">
+                                    <div class="select-Category">
+                                        <div class="form-group-lg py-2">
+                                            <label for="article"> Article Title</label>
+                                            <input type="text" placeholder="Type here" id="article" class="form-control" formControlName="title" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row bg">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="article_description">Article Description</label>
+                                        <textarea class="form-control" rows="5" id="article_description" formControlName="description" placeholder="Article Description" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="ml-0"><button class="btn btn-dark btn_border_radius" (click)="addNewArticle()">+Add More</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid bg-secondary">
+                        <div class="row py-3">
+                            <div class="col-sm-8"></div>
+                            <div class="col-sm-4 ">
+                                <div class="btn_right">
+                                    <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="navigateBack('#qa','#article')">Back</a>&nbsp;
+                                    <a class="btn btn-dark ml-auto px-5" style="border-radius:30px;" data-toggle="tab"
+                                        (click)="articleFormSubmit('#contact')">Next</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--article tab content -->
+
+
+
+                <!--Contact tab content -->
+                <div id="contact" class="container tab-pane fade" [formGroup]="contactForm"><br>
+
+                    <div>
+                        <div class="row bg">
+                            <div class="col-sm-12">
+                                <div class="select-Category">
+                                    <div class="form-group-lg">
+                                        <label for="article"> College Title</label>
+                                        <input type="text" placeholder="Type here" id="article" formControlName="college_title" class="form-control"
+                                                [ngClass]="{ 'is-invalid': contactSubmitted && contactFormControl.college_title.errors }"
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div *ngFor="let validation of contactFormValidations.college_title" class="mb-3">
+                            <div *ngIf="contactSubmitted && contactFormControl.college_title.errors">
+                                <span class="invalid-feedback d-block text-left"
+                                    *ngIf="contactForm.get('college_title').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                            </div>
+                        </div> -->
+
+                        <div class="row bg">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="article_description">College Description</label>
+                                    <textarea class="form-control" rows="5" id="college_description" placeholder="College Description" formControlName="college_description" 
+                                    [ngClass]="{ 'is-invalid': contactSubmitted && contactFormControl.college_description.errors }" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div *ngFor="let validation of contactFormValidations.college_description" class="mb-3">
+                            <div *ngIf="contactSubmitted && contactFormControl.college_description.errors">
+                                <span class="invalid-feedback d-block text-left"
+                                    *ngIf="contactForm.get('college_description').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                            </div>
+                        </div> -->
+
+
+                        <div class="row bg">
+                            <div class="col-sm-6 ">
+                                <div class="select-specialization">
+                                    <div class="form-group ">
+                                        <label for="college_url">College Url</label>
+                                        <input type="url" class="form-control" id="college_url" placeholder="AD.COM" formControlName="college_url" 
+                                        [ngClass]="{ 'is-invalid': contactSubmitted && contactFormControl.college_url.errors }" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div *ngFor="let validation of contactFormValidations.college_url" class="mb-3">
+                                <div *ngIf="contactSubmitted && contactFormControl.college_url.errors">
+                                    <span class="invalid-feedback d-block text-left"
+                                        *ngIf="contactForm.get('college_url').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                                </div>
+                            </div> -->
+                            <div class="col-sm-6 ">
+                                <div class="select-specialization">
+                                    <div class="form-group">
+                                        <label for="email">College Email Address</label>
+                                        <input type="email"   placeholder="ad2gmail.com" class="form-control" id="college_email_id" formControlName="college_email_id" 
+                                        [ngClass]="{ 'is-invalid': contactSubmitted && contactFormControl.college_email_id.errors }">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div *ngFor="let validation of contactFormValidations.college_email_id" class="mb-3">
+                                <div *ngIf="contactSubmitted && contactFormControl.college_email_id.errors">
+                                    <span class="invalid-feedback d-block text-left"
+                                        *ngIf="contactForm.get('college_email_id').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <div class="row bg">
+                            <div class="col-sm-6 ">
+                                <div class="select-specialization">
+                                    <div class="form-group">
+                                        <label for="college_ph">College Phone Number</label>
+                                        <input type="text" class="form-control" id="college_ph" placeholder="8896326327" formControlName="college_phone_number" 
+                                        [ngClass]="{ 'is-invalid': contactSubmitted && contactFormControl.college_phone_number.errors }" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div *ngFor="let validation of contactFormValidations.college_phone_number" class="mb-3">
+                                <div *ngIf="contactSubmitted && contactFormControl.college_phone_number.errors">
+                                    <span class="invalid-feedback d-block text-left"
+                                        *ngIf="contactForm.get('college_phone_number').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                                </div>
+                            </div> -->
+                            <div class="col-sm-6 ">
+                                <div class="select-specialization">
+                                    <div class="form-group">
+                                        <label for="college_ph">College Mobile Number</label>
+                                        <input type="text" class="form-control" id="college_ph"  placeholder="988655566" formControlName="college_mobile_number" 
+                                        [ngClass]="{ 'is-invalid': contactSubmitted && contactFormControl.college_mobile_number.errors }">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div *ngFor="let validation of contactFormValidations.college_mobile_number" class="mb-3">
+                                <div *ngIf="contactSubmitted && contactFormControl.college_mobile_number.errors">
+                                    <span class="invalid-feedback d-block text-left"
+                                        *ngIf="contactForm.get('college_mobile_number').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                                </div>
+                            </div> -->
+                        </div>
+
+
+
+                        <div class="row bg">
+                            <div class="col-sm-6 ">
+                                <div class="select-specialization">
+                                    <div class="form-group">
+                                        <label for="college_ph">College Map</label>
+                                        <input type="text" class="form-control" id="college_ph" placeholder="<iframe class='image-area'" formControlName="college_map" 
+                                        [ngClass]="{ 'is-invalid': contactSubmitted && contactFormControl.college_map.errors }" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div *ngFor="let validation of contactFormValidations.college_map" class="mb-3">
+                            <div *ngIf="contactSubmitted && contactFormControl.college_map.errors">
+                                <span class="invalid-feedback d-block text-left"
+                                    *ngIf="contactForm.get('college_map').hasError('required')">{{validation.type == 'required'? validation.message : ''}}</span>
+                            </div>
+                        </div> -->
+
+
+                    </div>
+
+                        <div class="container-fluid bg-secondary">
+                            <div class="row py-3">
+                                <div class="col-sm-8"></div>
+                                <div class="col-sm-4 ">
+                                    <div class="btn_right">
+                                        <a class="btn btn-default px-5" style="border-radius:30px;" data-toggle="tab"
+                                            (click)="navigateBack('#events','#contact')">Back</a>&nbsp;
+                                        <a class="btn btn-dark ml-auto px-5" style="border-radius:30px;" data-toggle="tab"
+                                            (click)="contactFormSubmit('#qa')">Submit</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--Contact tab content -->
+
+
+
+
+                </div>
+
+
+
+
+            </div>

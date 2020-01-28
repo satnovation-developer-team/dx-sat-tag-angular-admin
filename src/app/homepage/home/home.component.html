@@ -1,0 +1,633 @@
+<!-- <div class="wrapper">
+
+
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+      </li>
+    </ul>
+
+
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+
+    <ul class="navbar-nav ml-auto">
+   
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fa fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
+          <i class="fa fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="index3.html" class="brand-link">
+      <span class="brand-text font-weight-light">TAG</span>
+    </a>
+
+    <div class="sidebar">
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Alexander Pierce</a>
+        </div>
+      </div>
+
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+          <li class="nav-item">
+            <a [routerLink]="['/dashboard']" class="nav-link">
+              <i class="fa fa-tachometer-alt nav-icon"></i> 
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+      
+          <li class="nav-item">
+            <a href="pages/widgets.html" class="nav-link">
+              <i class="fa fa-circle nav-icon"></i>
+              <p>
+                Categories
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link" [routerLink]="['/recruiters']">
+              <i class="fa fa-circle nav-icon"></i>
+              <p>
+               Recruiters
+              </p>
+            </a>
+
+          </li>
+          <li class="nav-item has-treeview">
+            <a class="nav-link" [routerLink]="['/usermanagement']">
+              <i class="fa fa-user nav-icon"></i>
+              <p>
+                User Management
+              </p>
+            </a>
+
+          </li>
+          <li class="nav-item has-treeview">
+            <a  [routerLink]="['/partner_with_us_home']" class="nav-link">
+              <i class="fa fa-circle nav-icon"></i>
+              <p>
+                Partner With US
+              </p>
+            </a>
+
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" [routerLink]="['/courses_single_page']">
+              <i class="fa fa-copy nav-icon"></i>
+              <p>
+                Courses Single Page
+              </p>
+            </a>
+
+          </li>
+          <li class="nav-item has-treeview">
+            <a class="nav-link" [routerLink]="['/courses']">
+              <i class="fa fa-circle nav-icon"></i>
+              <p>
+                Courses Add Fee
+              </p>
+            </a>
+
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="fa fa-circle nav-icon"></i>
+              <p>
+                Specifialization
+              </p>
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/college_home']" class="nav-link">
+              <i class="fa fa-university nav-icon"></i>
+              <p>
+                College>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/gallery.html" class="nav-link">
+              <i class="fa fa-book-reader nav-icon"></i>
+              <p>
+                School
+              </p>
+            </a>
+          </li>
+       
+          <li class="nav-item ">
+            <a href="#" class="nav-link">
+              <i class="fa fa-circle nav-icon"></i>
+              <p style="font-size: 15px;">
+                Specialization Single Page
+              </p>
+            </a>
+
+          </li>
+          <li class="nav-item ">
+            <a href="#" class="nav-link">
+              <i class="fa fa-circle nav-icon"></i>
+              <p>
+                School Single Page
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a [routerLink]="['/application_form_home']"class="nav-link">
+              <i class="fa fa-circle nav-icon"></i>
+              <p>Application Form</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a [routerLink]="['/location']"class="nav-link">
+              <i class="fa fa-circle nav-icon"></i>
+              <p>Location</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a [routerLink]="['/application_service_charge_home']" class="nav-link">
+              <i class="fa fa-circle nav-icon"></i>
+              <p style="font-size: 12px;">Application Service Charge</p>
+            </a>
+          </li>
+
+          
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-circle nav-icon"></i>
+              <p>Reports</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-circle"></i>
+              <p>
+                Manage Static Content
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-circle nav-icon"></i>
+              <p>Admin ON/OFF Feature</p>
+            </a>
+          </li>
+        
+          
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+
+  <div class="content-wrapper">
+
+    <router-outlet></router-outlet>
+  
+  </div>
+
+
+  <aside class="control-sidebar control-sidebar-dark">
+  
+  </aside>
+
+</div> -->
+
+<!-- <mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Custom Toolbar</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container" #navcontainer>
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')">
+  
+        <mat-nav-list >
+          <a mat-list-item routerLink="/dashboard" >
+            <mat-icon mat-list-icon>home</mat-icon>Dashboard</a>
+          <a mat-list-item routerLink="/tests" >
+            <mat-icon mat-list-icon>fate</mat-icon>Test</a>
+          <a mat-list-item  >
+            <mat-icon mat-list-icon>list</mat-icon>Menu Item 2</a>
+            <a mat-list-item routerLink="/dashboard" >
+              <mat-icon mat-list-icon>home</mat-icon>Dashboard</a>
+            <a mat-list-item routerLink="/tests" >
+              <mat-icon mat-list-icon>fate</mat-icon>Test</a>
+            <a mat-list-item  >
+              <mat-icon mat-list-icon>list</mat-icon>Menu Item 2</a>
+              <a mat-list-item routerLink="/dashboard" >
+                <mat-icon mat-list-icon>home</mat-icon>Dashboard</a>
+              <a mat-list-item routerLink="/tests" >
+                <mat-icon mat-list-icon>fate</mat-icon>Test</a>
+              <a mat-list-item  >
+                <mat-icon mat-list-icon>list</mat-icon>Menu Item 2</a>
+                <a mat-list-item routerLink="/dashboard" >
+                  <mat-icon mat-list-icon>home</mat-icon>Dashboard</a>
+                <a mat-list-item routerLink="/tests" >
+                  <mat-icon mat-list-icon>fate</mat-icon>Test</a>
+                <a mat-list-item  >
+                  <mat-icon mat-list-icon>list</mat-icon>Menu Item 2</a>
+         
+
+        </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <header>tag</header>
+    <p><button mat-button (click)="sidenav.toggle()">bar</button></p>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<!-- <mat-toolbar color="primary" class="bg-dark text-white">
+  <h3 class="text-white  pr-5">TAG</h3>
+ <i class="fa fa-bars fa-2x px-5" (click)="sidenav.toggle()"></i>
+</mat-toolbar>
+
+
+  <mat-sidenav-container  class="sidenavbars">
+ 
+  <mat-sidenav mode="side" [(opened)]="opened"    (opened)="events.push('open!')" (closed)="events.push('close!')">
+
+    <mat-nav-list class="bg-dark">
+
+        <a [routerLink]="['/dashboard']" mat-list-item>
+          <i class="fa fa-tachometer nav-icon"></i> 
+          <span>
+            Dashboard
+          </span>
+        </a>
+    
+
+        <a href="pages/widgets.html" mat-list-item>
+          <i class="fa fa-circle nav-icon"></i>
+          <span>
+            Categories
+          </span>
+        </a>
+
+        <a href="#" mat-list-item [routerLink]="['/recruiters']">
+          <i class="fa fa-circle nav-icon"></i>
+          <span>
+           Recruiters
+          </span>
+        </a>
+
+     
+        <a mat-list-item [routerLink]="['/usermanagement']">
+          <i class="fa fa-user nav-icon"></i>
+          <span>
+            User Management
+          </span>
+        </a>
+
+
+        <a  [routerLink]="['/partner_with_us_home']" mat-list-item>
+          <i class="fa fa-circle nav-icon"></i>
+          <span>
+            Partner With US
+          </span>
+        </a>
+
+
+        <a mat-list-item [routerLink]="['/courses_single_page']">
+          <i class="fa fa-copy nav-icon"></i>
+          <span>
+            Courses Single Page
+          </span>
+        </a>
+
+    
+        <a mat-list-item [routerLink]="['/courses']">
+          <i class="fa fa-circle nav-icon"></i>
+          <span>
+            Courses Add Fee
+          </span>
+        </a>
+
+  
+        <a href="#" mat-list-item>
+          <i class="fa fa-circle nav-icon"></i>
+          <span>
+            Specifialization
+          </span>
+        </a>
+
+        <a [routerLink]="['/college_home']" mat-list-item>
+          <i class="fa fa-university nav-icon"></i>
+          <span>
+            College
+          </span>
+        </a>
+
+        <a href="pages/gallery.html" mat-list-item>
+          <i class="fa fa-book nav-icon"></i>
+          <span>
+            School
+          </span>
+        </a>
+ 
+        <a href="#" mat-list-item>
+          <i class="fa fa-circle nav-icon"></i>
+          <span style="font-size: 15px;">
+            Specialization Single Page
+          </span>
+        </a>
+
+
+        <a href="#" mat-list-item>
+          <i class="fa fa-circle nav-icon"></i>
+          <span>
+            School Single Page
+          </span>
+        </a>
+
+        <a [routerLink]="['/application_form_home']" mat-list-item>
+          <i class="fa fa-circle nav-icon"></i>
+          <span>Application Form</span>
+        </a>
+ 
+        <a [routerLink]="['/location']" mat-list-item>
+          <i class="fa fa-circle nav-icon"></i>
+          <span>Location</span>
+        </a>
+    
+        <a [routerLink]="['/application_service_charge_home']" mat-list-item>
+          <i class="fa fa-circle nav-icon"></i>
+          <span style="font-size: 12px;">Application Service Charge</span>
+        </a>
+  
+        <a href="#" mat-list-item>
+          <i class="fa fa-circle nav-icon"></i>
+          <span>Reports</span>
+        </a>
+
+        <a href="#" mat-list-item>
+          <i class="nav-icon fa fa-circle"></i>
+          <span>
+            Manage Static Content
+          </span>
+        </a>
+
+
+        <a href="#" mat-list-item>
+          <i class="fa fa-circle nav-icon"></i>
+          <span>Admin ON/OFF Feature</span>
+        </a>
+ 
+    
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+
+
+
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar class="example-toolbar bg-dark text-white">
+        <button mat-icon-button (click)="snav.toggle()" class="example-icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+        <h1 class="example-icon">TAG</h1>
+        <span class="example-spacer"></span>
+        <span (click)="logout()">Logout</span>
+    </mat-toolbar>
+
+
+    <!-- <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a> -->
+
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #snav [(opened)]="opened" [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+            <mat-nav-list>
+                <!-- <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a> -->
+
+                <a [routerLink]="['/dashboard']" mat-list-item>
+                    <i class="fa fa-tachometer nav-icon"></i> Dashboard
+                </a>
+
+                <a [routerLink]="['/home-benefits']" mat-list-item>
+                    <i class="fa fa-home" aria-hidden="true"></i>Home
+                </a>
+
+                <a mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Categories
+                </a>
+
+                <a mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Categories
+                </a>
+
+
+                <a mat-list-item [routerLink]="['/usermanagement']">
+                    <i class="fa fa-user nav-icon"></i> User Management
+                </a>
+
+                <a [routerLink]="['/partner_with_us_home']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Partner With US
+                </a>
+
+
+                <a mat-list-item [routerLink]="['/courses_single_page']">
+                    <i class="fa fa-copy nav-icon"></i> Courses Single Page
+                </a>
+
+                <a [routerLink]="['/facilaties_home']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Facilaties
+                </a>
+
+                <a [routerLink]="['/stream-home']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Stream
+
+                </a>
+                <a [routerLink]="['/class-home']" mat-list-item>
+                    <i class="fa fa-book" aria-hidden="true"></i> Class
+                </a>
+
+
+                <a mat-list-item [routerLink]="['/courses']">
+                    <i class="fa fa-circle nav-icon"></i> Courses Add Fee
+                </a>
+
+
+
+
+                <a [routerLink]="['/school-home']" mat-list-item>
+                    <i class="fa fa-book nav-icon"></i> School
+                </a>
+
+                <a [routerLink]="['/specialization-single-home']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Specialization Single Page
+
+                </a>
+
+
+                <a [routerLink]="['/college_home']" mat-list-item>
+                    <i class="fa fa-university nav-icon"></i> College
+                </a>
+
+                <a [routerLink]="['/application_form_home']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Application Form
+                </a>
+
+                <a [routerLink]="['/college_responded_application_form_home']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> College Responded Form
+                </a>
+                <a [routerLink]="['/location']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Location
+                </a>
+
+                <a [routerLink]="['/application_service_charge_home']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Application Service Charge
+                </a>
+
+                <a mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Reports
+                </a>
+
+                <a [routerLink]="['/fees_master']" mat-list-item>
+                    <i class="nav-icon fa fa-circle"></i> Fees Master
+                </a>
+
+                <a [routerLink]="['/fees_setup']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Fees Setups
+                </a>
+                <a [routerLink]="['/college_messages']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> College Messages
+                </a>
+
+                <a [routerLink]="['/about-us-home']" mat-list-item>
+                    <i class="fa fa-book nav-icon"></i> Manage Static Contants
+                </a>
+
+                <a mat-list-item>
+                    <i class="fa fa-university nav-icon"></i> Payment
+                </a>
+
+
+                <a [routerLink]="['/ratings']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Ratings
+                </a>
+                <a [routerLink]="['/talk_to_expert_home']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Talk To Expert
+                </a>
+                <a [routerLink]="['/all_india_board_home']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> All India Board
+                </a>
+                <a [routerLink]="['/state_regular_board_home']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> State Regular Board
+                </a>
+                <a [routerLink]="['/open_board_home']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Open Board
+                </a>
+
+                <a [routerLink]="['/exam_home']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Exam
+                </a>
+                <a [routerLink]="['/result_home']" mat-list-item>
+                    <i class="fa fa-circle nav-icon"></i> Result
+                </a>
+
+
+                <a [routerLink]="['/role-master']" mat-list-item>
+                    <i class="fa fa-book nav-icon"></i> Role Master
+                </a>
+
+                <a [routerLink]="['/assign-privilage']" mat-list-item>
+                    <i class="fa fa-book nav-icon"></i> Assumption Privilege
+                </a>
+
+
+                <a [routerLink]="['/user-creation']" mat-list-item>
+                    <i class="fa fa-book nav-icon"></i> User Creation
+                </a>
+
+                <a href="#" mat-list-item [routerLink]="['/recruiters']">
+                  <i class="fa fa-circle nav-icon"></i>
+                  <span>
+                   Recruiters
+                  </span>
+                </a>
+
+                <a [routerLink]="['/send-notification']" mat-list-item>
+                    <i class="fa fa-book nav-icon"></i> Send Notifications
+                </a>
+
+                <a [routerLink]="['/testimonal']" mat-list-item>
+                    <i class="fa fa-book nav-icon"></i> Testimonials
+                </a>
+                <a [routerLink]="['/talk_to_counseller']" mat-list-item>
+                    <i class="fa fa-book nav-icon"></i> Talk to Counseller
+                </a>
+                <a [routerLink]="['/cousrse_after_10th_12th_ug_pg']" mat-list-item>
+                    <i class="fa fa-book nav-icon"></i> Course after 10th/12th
+                </a>
+                <!-- <a [routerLink]="['/interest_of_your_courses']" mat-list-item>
+          <i class="fa fa-book nav-icon"></i>Interest Of Your Courses
+        </a> -->
+
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
